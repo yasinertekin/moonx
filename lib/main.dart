@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:moonx/feature/onboarding/view/onboarding_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moonx/feature/splash/splash_view.dart';
+import 'package:moonx/product/core/initialize/project_initializer.dart';
+import 'package:moonx/product/utils/cache/users_bloc.dart';
+import 'package:moonx/product/utils/theme/app_theme.dart';
 
-void main() {
+Future<void> main() async {
+  await ProjectInitializer.initialize();
   runApp(
-    const _MoonX(),
+    BlocProvider<UsersBloc>(
+      create: (context) => UsersBloc(),
+      child: const _MoonX(),
+    ),
   );
 }
 
@@ -14,11 +22,8 @@ final class _MoonX extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const OnboardingView(),
+      theme: CustomTheme().themeData,
+      home: const SplashView(),
     );
   }
 }
