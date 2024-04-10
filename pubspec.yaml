@@ -22,6 +22,15 @@ dependencies:
   # Cache
   hydrated_bloc: ^9.1.5
 
+  # Core
+  equatable: ^2.0.5
+  path_provider: ^2.1.2
+  intl: ^0.19.0
+  kartal: ^4.0.3
+
+  # Google
+  json_annotation: ^4.8.1
+
   gen:
     path: package/gen
 
@@ -33,6 +42,10 @@ dev_dependencies:
 
   # Lints
   very_good_analysis: ^5.1.0
+
+  # Code Generation
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.9
 
 flutter:
 
