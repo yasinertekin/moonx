@@ -8,27 +8,30 @@ base mixin _OnboardingBuilderMixin on State<_OnboardingBuilder>
       case OnBoardingEnum.welcome:
         return const _WelcomeView();
       case OnBoardingEnum.birthDate:
-        return const _BirthDateView();
+        return _BirthDateView(
+          OnBoardingEnum.birthDate.onboarding,
+        );
       case OnBoardingEnum.birthPlace:
-        return const _BirthPlaceView();
+        return _BirthPlaceView(
+          OnBoardingEnum.birthPlace.onboarding,
+        );
     }
-  }
-
-  late final TabController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = TabController(
-      length: OnBoardingEnum.values.length,
-      vsync: this,
-    );
   }
 
   @override
   void dispose() {
+    context.read<OnboardingCubit>().dispose();
     super.dispose();
-    _controller.dispose();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(
+      () => context
+          .read<OnboardingCubit>()
+          .initializeTabController(OnBoardingEnum.values.length, this),
+    );
   }
 }
 
@@ -52,9 +55,10 @@ extension OnBoardingEnumExtension on OnBoardingEnum {
     switch (this) {
       case OnBoardingEnum.welcome:
         return Onboarding(
-          title: 'Welcome to our store',
+          title: 'Welcome',
           description:
-              'We are here to help you find the best products for your needs',
+              // ignore: lines_longer_than_80_chars
+              'Sed ut perspiciatis unde omnis iste natus\nerror sit voluptatem accusam.   Sed ut\nperspt perspiciatis unde omnis iste natus\nerror si.',
           image: Assets.images.imgWelcome.image(
             package: 'gen',
             fit: BoxFit.cover,
@@ -63,18 +67,18 @@ extension OnBoardingEnumExtension on OnBoardingEnum {
       case OnBoardingEnum.birthDate:
         return Onboarding(
           description:
-              'We have a wide range of products for you to choose from',
-          image: Assets.images.imgWelcome.image(
+              'Sed ut perspiciatis unde omnis iste natus\nerror sit voluptatem accusam.   Sed ut\nperspt perspiciatis unde omnis iste natus\nerror si.',
+          image: Assets.images.imgBirthDate.image(
             package: 'gen',
             fit: BoxFit.cover,
           ),
         );
       case OnBoardingEnum.birthPlace:
         return Onboarding(
-          title: 'Get the best deals',
+          title: 'Where were you born?',
           description:
-              'We offer the best deals for our customers. Check out now!',
-          image: Assets.images.imgWelcome.image(
+              'Sed ut perspiciatis unde omnis iste natus\nerror sit voluptatem accusam.   Sed ut\nperspt perspiciatis unde omnis iste natus\nerror si.',
+          image: Assets.images.imgBirthPlace.image(
             package: 'gen',
             fit: BoxFit.cover,
           ),
