@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
-import 'package:moonx/feature/home/view/home_view.dart';
 import 'package:moonx/feature/onboarding/view/onboarding_view.dart';
 import 'package:moonx/product/utils/cache/users_bloc.dart';
 import 'package:moonx/product/utils/cache/users_state.dart';
@@ -19,7 +18,7 @@ final class SplashView extends StatelessWidget {
         if (users.birthDate.isEmpty) {
           return const OnboardingView();
         } else {
-          return const HomeView();
+          return const OnboardingView();
         }
       },
     );

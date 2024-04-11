@@ -26,9 +26,14 @@ final class _SelectBirthTimeButton extends StatelessWidget {
   }
 }
 
-final class _SelectBirthTimePicker extends StatelessWidget {
+final class _SelectBirthTimePicker extends StatefulWidget {
   const _SelectBirthTimePicker();
 
+  @override
+  State<_SelectBirthTimePicker> createState() => _SelectBirthTimePickerState();
+}
+
+class _SelectBirthTimePickerState extends State<_SelectBirthTimePicker> {
   @override
   Widget build(BuildContext context) {
     final usersBloc = BlocProvider.of<UsersBloc>(context);
@@ -41,6 +46,7 @@ final class _SelectBirthTimePicker extends StatelessWidget {
           backgroundColor: CupertinoColors.darkBackgroundGray,
           mode: CupertinoDatePickerMode.time,
           onDateTimeChanged: (dateTime) {
+            if (!mounted) return;
             usersBloc.add(
               UpdateUsersEvent(
                 state.copyWith(

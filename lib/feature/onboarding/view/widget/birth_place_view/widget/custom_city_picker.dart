@@ -33,34 +33,53 @@ final class _CustomPicker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 7,
-      child: BlocSelector<UsersBloc, UsersState, Users>(
-        selector: (state) => state.users,
-        builder: (context, state) {
-          return CupertinoPicker(
-            backgroundColor: CupertinoColors.darkBackgroundGray,
-            itemExtent: context.dynamicHeight(0.08),
-            onSelectedItemChanged: (index) {
-              context.read<UsersBloc>().add(
-                    UpdateUsersEvent(
-                      state.copyWith(
-                        placeOfBirth: _cityList[index],
-                      ),
-                    ),
-                  );
-            },
-            children: List.generate(
-              _cityList.length,
-              (index) => Center(
-                child: Text(
-                  _cityList[index],
-                  style: context.theme.textTheme.bodyLarge?.copyWith(
-                    color: Colors.white,
+      child: _CustomCupertinoCityPicker(cityList: _cityList),
+    );
+  }
+}
+
+final class _CustomCupertinoCityPicker extends StatefulWidget {
+  const _CustomCupertinoCityPicker({
+    required List<String> cityList,
+  }) : _cityList = cityList;
+
+  final List<String> _cityList;
+
+  @override
+  State<_CustomCupertinoCityPicker> createState() =>
+      _CustomCupertinoCityPickerState();
+}
+
+final class _CustomCupertinoCityPickerState
+    extends State<_CustomCupertinoCityPicker> {
+  @override
+  Widget build(BuildContext context) {
+    return BlocSelector<UsersBloc, UsersState, Users>(
+      selector: (state) => state.users,
+      builder: (context, state) => CupertinoPicker(
+        backgroundColor: CupertinoColors.darkBackgroundGray,
+        itemExtent: context.dynamicHeight(0.08),
+        onSelectedItemChanged: (index) {
+          if (!mounted) return;
+          context.read<UsersBloc>().add(
+                UpdateUsersEvent(
+                  state.copyWith(
+                    placeOfBirth: widget._cityList[index],
                   ),
                 ),
+              );
+        },
+        children: List.generate(
+          widget._cityList.length,
+          (index) => Center(
+            child: Text(
+              widget._cityList[index],
+              style: context.theme.textTheme.bodyLarge?.copyWith(
+                color: Colors.white,
               ),
             ),
-          );
-        },
+          ),
+        ),
       ),
     );
   }

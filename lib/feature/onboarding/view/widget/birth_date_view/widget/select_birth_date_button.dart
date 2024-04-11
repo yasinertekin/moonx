@@ -12,7 +12,6 @@ final class _SelectBirthDateButtonState extends State<_SelectBirthDateButton>
   @override
   void showCustomCupertinoModal(BuildContext context) {
     showCupertinoModalPopup<void>(
-      semanticsDismissible: true,
       context: context,
       builder: (BuildContext context) {
         return Container(
@@ -42,8 +41,11 @@ final class _SelectBirthDateButtonState extends State<_SelectBirthDateButton>
       builder: (context, state) {
         return ProjectButton(
           backgroundColor: ColorName.colorKon,
-          onPressed: () => showCustomCupertinoModal(context),
-          title: state.birthDate.isEmpty ? _formattedDate : state.birthDate,
+          onPressed: () {
+            showCustomCupertinoModal(context);
+          },
+          title:
+              state.birthDate.isEmpty ? 'Select Birth Date' : state.birthDate,
         );
       },
     );
