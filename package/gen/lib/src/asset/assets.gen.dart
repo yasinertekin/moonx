@@ -78,9 +78,9 @@ class $AssetsImagesGen {
   AssetGenImage get imgBirthDate =>
       const AssetGenImage('assets/images/img_birth_date.png');
 
-  /// File path: assets/images/img_birth_place.png
+  /// File path: assets/images/img_birth_place..png
   AssetGenImage get imgBirthPlace =>
-      const AssetGenImage('assets/images/img_birth_place.png');
+      const AssetGenImage('assets/images/img_birth_place..png');
 
   /// File path: assets/images/img_welcome.png
   AssetGenImage get imgWelcome =>
