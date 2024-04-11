@@ -12,6 +12,13 @@ dependencies:
 
   # UI
   flutter_svg: ^2.0.10+1
+
+  # Google
+  json_annotation: ^4.8.1
+
+  # Core
+  equatable: ^2.0.5
+
   
 
 dev_dependencies:
@@ -22,6 +29,8 @@ dev_dependencies:
   # Code generation
   flutter_gen_runner: ^5.4.0
   build_runner: ^2.4.9
+  json_serializable: ^6.7.1
+
 
 flutter_gen:
   output: lib/src/asset/
