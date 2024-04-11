@@ -31,20 +31,45 @@ final class _BirthPlaceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: context.dynamicHeight(0.55),
+      top: context.dynamicHeight(0.5),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           _EnterBirthPlaceText(
             onboarding,
           ),
+          const EmptySizedBox(),
           _BirthPlaceDescription(
             onboarding,
           ),
-          const EmptySizedBox(),
-          const _SelectBirthPlaceButton(),
-          const EmptySizedBox(),
+          EmptySizedBox(
+            height: context.dynamicHeight(0.03),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const _EnterPlaceBirthText(),
+              EmptySizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              const _SelectBirthPlaceButton(),
+            ],
+          ),
         ],
+      ),
+    );
+  }
+}
+
+final class _EnterPlaceBirthText extends StatelessWidget {
+  const _EnterPlaceBirthText();
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'Enter Your Place of Birth',
+      style: context.theme.textTheme.bodyLarge?.copyWith(
+        color: ColorName.colorMercury,
+        fontSize: 16,
       ),
     );
   }
@@ -63,6 +88,7 @@ final class _BirthPlaceDescription extends StatelessWidget {
       onboarding.description,
       style: context.theme.textTheme.bodyLarge?.copyWith(
         color: ColorName.colorDhusarGrey,
+        fontSize: 16,
       ),
       textAlign: TextAlign.center,
     );
@@ -81,7 +107,8 @@ final class _EnterBirthPlaceText extends StatelessWidget {
     return Text(
       onboarding.title!,
       style: context.theme.textTheme.bodyLarge?.copyWith(
-        color: Colors.white,
+        color: ColorName.colorMercury,
+        fontSize: 24,
       ),
     );
   }
