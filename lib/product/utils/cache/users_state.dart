@@ -12,6 +12,7 @@ final class UsersState extends Equatable {
               birthDate: '',
               birthTime: '',
               placeOfBirth: '',
+              horoscope: Horoscope.aries,
             );
   final Users users;
 
