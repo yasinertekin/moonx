@@ -73,6 +73,7 @@ doc/api/
 ### Dart Patch ###
 # dotenv environment variables file
 .env
+weather.env
 
 ### Firebase ###
 .idea
