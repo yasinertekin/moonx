@@ -8,13 +8,8 @@
     <color name="colorMagnesium">#c2c2c2</color>
     <color name="colorDarkRift">#080a16</color>
     <color name="colorColdWind">#E2E3E3</color>
-
-  
-
-
-
-
-
-
-
+    <color name="colorEeriaBlack">#1a1a1a</color>
+    <color name="colorGloomyPurple">#8e53d8</color>
+    <color name="colorGluttony">#f07a22</color>
+    
 </resources>
