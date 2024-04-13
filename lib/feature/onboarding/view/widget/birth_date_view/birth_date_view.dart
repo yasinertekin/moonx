@@ -33,7 +33,6 @@ final class _BirthDateBody extends StatelessWidget {
     return Positioned(
       top: context.dynamicHeight(0.4),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _BirthDateDescription(
             onboarding.description,
@@ -41,13 +40,25 @@ final class _BirthDateBody extends StatelessWidget {
           EmptySizedBox(
             height: context.dynamicHeight(0.03),
           ),
-          const _EnterBirthDateText(),
-          const EmptySizedBox(),
-          const _SelectBirthDateButton(),
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _EnterBirthDateText(),
+              EmptySizedBox(),
+              _SelectBirthDateButton(),
+            ],
+          ),
           EmptySizedBox(height: context.dynamicHeight(0.02)),
-          const _BirtTimeText(),
-          const EmptySizedBox(),
-          const _SelectBirthTimeButton(),
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _BirtTimeText(),
+              EmptySizedBox(),
+              _SelectBirthTimeButton(),
+            ],
+          ),
         ],
       ),
     );

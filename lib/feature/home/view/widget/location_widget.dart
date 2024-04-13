@@ -5,14 +5,27 @@ final class _LocationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        _TimeBasedText(),
-        _LocationText(),
-        _MoonImage(),
-        EmptySizedBox(),
-        _DateTimeText(),
-        WeatherText(),
+        ElevatedButton(
+          onPressed: () {
+            print(context
+                .read<LocationCubit>()
+                .state
+                .locationDetails
+                .first
+                .subAdministrativeArea);
+
+            print(context.read<LocationCubit>().state.weather?.current?.tempC);
+          },
+          child: const Text('Get Location'),
+        ),
+        const _TimeBasedText(),
+        const _LocationText(),
+        const _MoonImage(),
+        const EmptySizedBox(),
+        const _DateTimeText(),
+        const WeatherText(),
       ],
     );
   }
