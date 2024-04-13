@@ -76,6 +76,7 @@ final class LocationCubit extends Cubit<LocationState> {
       );
     } catch (e) {
       emit(state.copyWith(status: LocationStatus.locationError));
+      print(e);
     }
   }
 }

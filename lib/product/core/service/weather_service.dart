@@ -13,7 +13,7 @@ final class WeatherServiceImpl extends IWeatherService {
   @override
   Future<Weather> fetchWeather(String cityName) async {
     final response = await service.get<Map<String, dynamic>>(
-      'current.json?key=${AppEnvironmentItems.weatherApiKey}&q=$cityName&aqi=no',
+      'current.json?key=${AppEnvironmentItems.weatherApiKey.value}&q=$cityName&aqi=no',
     );
     if (response.statusCode == 200) {
       return Weather.fromJson(response.data!);
