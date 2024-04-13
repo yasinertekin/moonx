@@ -10,20 +10,23 @@ final class ProjectButton extends StatelessWidget {
     super.key,
     this.backgroundColor,
     this.height,
-    this.widht,
+    this.width,
     this.title,
     this.borderRadiusGeometry,
+    this.titleColor,
   });
 
   final Color? backgroundColor;
 
   final double? height;
 
-  final double? widht;
+  final double? width;
 
   final VoidCallback onPressed;
 
   final String? title;
+
+  final Color? titleColor;
 
   final BorderRadiusGeometry? borderRadiusGeometry;
 
@@ -31,14 +34,14 @@ final class ProjectButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height ?? context.dynamicHeight(0.07),
-      width: widht ?? context.dynamicWidth(0.75),
+      width: width ?? context.dynamicWidth(0.75),
       child: ElevatedButton(
         style: _CustomTheme(
           backgroundColor ?? ColorName.colorThickBlue,
           borderRadiusGeometry ?? ProjectRadius.small.borderRadius,
         ),
         onPressed: onPressed,
-        child: _ButtonTitle(title: title),
+        child: _ButtonTitle(title: title, titleColor: titleColor),
       ),
     );
   }
@@ -47,16 +50,21 @@ final class ProjectButton extends StatelessWidget {
 final class _ButtonTitle extends StatelessWidget {
   const _ButtonTitle({
     required this.title,
+    required this.titleColor,
   });
 
   final String? title;
+  final Color? titleColor;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title ?? StringConstants.next,
-      style: context.theme.textTheme.bodyLarge?.copyWith(
-        color: ColorName.colorMercury,
+    return FittedBox(
+      child: Text(
+        title ?? StringConstants.next,
+        style: context.theme.textTheme.bodyLarge?.copyWith(
+          color: titleColor ?? ColorName.colorMercury,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
