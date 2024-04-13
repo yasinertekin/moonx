@@ -17,6 +17,7 @@ final class Users extends Equatable {
     required this.birthDate,
     required this.birthTime,
     required this.placeOfBirth,
+    required this.horoscope,
     String? id,
   }) : id = id ?? Random().nextInt(1000).toString();
 
@@ -44,6 +45,8 @@ final class Users extends Equatable {
   /// Users Place of birth
   final String placeOfBirth;
 
+  final Horoscope horoscope;
+
   @override
   List<Object> get props => [
         id,
@@ -52,6 +55,7 @@ final class Users extends Equatable {
         birthDate,
         birthTime,
         placeOfBirth,
+        horoscope,
       ];
 
   /// Users copyWith
@@ -62,6 +66,7 @@ final class Users extends Equatable {
     String? birthDate,
     String? birthTime,
     String? placeOfBirth,
+    Horoscope? horoscope,
   }) {
     return Users(
       id: id ?? this.id,
@@ -70,6 +75,26 @@ final class Users extends Equatable {
       birthDate: birthDate ?? this.birthDate,
       birthTime: birthTime ?? this.birthTime,
       placeOfBirth: placeOfBirth ?? this.placeOfBirth,
+      horoscope: horoscope ?? this.horoscope,
     );
   }
+}
+
+enum Horoscope {
+  aries('Aries'),
+  taurus('Taurus'),
+  gemini('Gemini'),
+  cancer('Cancer'),
+  leo('Leo'),
+  virgo('Virgo'),
+  libra('Libra'),
+  scorpio('Scorpio'),
+  sagittarius('Sagittarius'),
+  capricorn('Capricorn'),
+  aquarius('Aquarius'),
+  pisces('Pisces');
+
+  const Horoscope(this.value);
+
+  final String value;
 }
