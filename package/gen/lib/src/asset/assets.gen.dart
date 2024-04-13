@@ -96,13 +96,41 @@ class $AssetsImagesGen {
   AssetGenImage get imgBackgroundOnboarding33x =>
       const AssetGenImage('assets/images/img_background_onboarding3@3x.png');
 
+  /// File path: assets/images/img_business.png
+  AssetGenImage get imgBusiness =>
+      const AssetGenImage('assets/images/img_business.png');
+
+  /// File path: assets/images/img_business2.png
+  AssetGenImage get imgBusiness2 =>
+      const AssetGenImage('assets/images/img_business2.png');
+
+  /// File path: assets/images/img_food.png
+  AssetGenImage get imgFood =>
+      const AssetGenImage('assets/images/img_food.png');
+
+  /// File path: assets/images/img_food2.png
+  AssetGenImage get imgFood2 =>
+      const AssetGenImage('assets/images/img_food2.png');
+
   /// File path: assets/images/img_home_background.png
   AssetGenImage get imgHomeBackground =>
       const AssetGenImage('assets/images/img_home_background.png');
 
+  /// File path: assets/images/img_home_banner.png
+  AssetGenImage get imgHomeBanner =>
+      const AssetGenImage('assets/images/img_home_banner.png');
+
   /// File path: assets/images/img_moon.png
   AssetGenImage get imgMoon =>
       const AssetGenImage('assets/images/img_moon.png');
+
+  /// File path: assets/images/img_relations.png
+  AssetGenImage get imgRelations =>
+      const AssetGenImage('assets/images/img_relations.png');
+
+  /// File path: assets/images/img_relations2.png
+  AssetGenImage get imgRelations2 =>
+      const AssetGenImage('assets/images/img_relations2.png');
 
   /// File path: assets/images/img_welcome.png
   AssetGenImage get imgWelcome =>
@@ -112,8 +140,15 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
         imgBackgroundOnboarding23x,
         imgBackgroundOnboarding33x,
+        imgBusiness,
+        imgBusiness2,
+        imgFood,
+        imgFood2,
         imgHomeBackground,
+        imgHomeBanner,
         imgMoon,
+        imgRelations,
+        imgRelations2,
         imgWelcome
       ];
 }

@@ -22,8 +22,17 @@ class ColorName {
   /// Color: #ABABAB
   static const Color colorDhusarGrey = Color(0xFFABABAB);
 
+  /// Color: #1a1a1a
+  static const Color colorEeriaBlack = Color(0xFF1A1A1A);
+
   /// Color: #FCFCFC
   static const Color colorEmptiness = Color(0xFFFCFCFC);
+
+  /// Color: #8e53d8
+  static const Color colorGloomyPurple = Color(0xFF8E53D8);
+
+  /// Color: #f07a22
+  static const Color colorGluttony = Color(0xFFF07A22);
 
   /// Color: #181D38
   static const Color colorKon = Color(0xFF181D38);
