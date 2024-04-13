@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
+@immutable
 final class DioManager {
   factory DioManager({required String baseUrl}) {
     _singleton._dio.options = BaseOptions(baseUrl: baseUrl);
