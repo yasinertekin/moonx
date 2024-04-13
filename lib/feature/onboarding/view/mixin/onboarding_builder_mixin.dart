@@ -68,7 +68,7 @@ extension OnBoardingEnumExtension on OnBoardingEnum {
         return Onboarding(
           description:
               'Sed ut perspiciatis unde omnis iste natus\nerror sit voluptatem accusam.   Sed ut\nperspt perspiciatis unde omnis iste natus\nerror si.',
-          image: Assets.images.imgBirthDate.image(
+          image: Assets.images.imgBackgroundOnboarding23x.image(
             package: 'gen',
             fit: BoxFit.cover,
           ),
@@ -78,7 +78,7 @@ extension OnBoardingEnumExtension on OnBoardingEnum {
           title: 'Where were you born?',
           description:
               'Sed ut perspiciatis unde omnis iste natus\nerror sit voluptatem accusam.   Sed ut\nperspt perspiciatis unde omnis iste natus\nerror si.',
-          image: Assets.images.imgBirthPlace.image(
+          image: Assets.images.imgBackgroundOnboarding33x.image(
             package: 'gen',
             fit: BoxFit.cover,
           ),

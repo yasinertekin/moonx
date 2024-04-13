@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,6 +38,7 @@ part 'widget/onboarding_button.dart';
 part 'widget/welcome_view/welcome_view.dart';
 
 /// Onboarding View
+@RoutePage()
 final class OnboardingView extends StatelessWidget {
   /// Constructor
   const OnboardingView({super.key});
