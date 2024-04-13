@@ -9,7 +9,7 @@ final class _SelectBirthPlaceButton extends StatefulWidget {
 }
 
 final class _SelectBirthPlaceButtonState extends State<_SelectBirthPlaceButton>
-    with _SelectBirthPlaceMixin {
+    with _SelectBirthPlaceMixin, HoroscopeMixin {
   @override
   void _showCityPicker(BuildContext context) {
     showCupertinoModalPopup<void>(
@@ -22,17 +22,36 @@ final class _SelectBirthPlaceButtonState extends State<_SelectBirthPlaceButton>
 
   @override
   Widget build(BuildContext context) {
+    final usersBloc = BlocProvider.of<UsersBloc>(context);
     return BlocSelector<UsersBloc, UsersState, Users>(
       selector: (state) => state.users,
       builder: (context, state) {
         return ProjectButton(
           backgroundColor: ColorName.colorKon,
-          onPressed: () => _showCityPicker(context),
+          onPressed: () async {
+            _setHoroscope(state, usersBloc);
+            _showCityPicker(context);
+          },
           title: state.placeOfBirth.isEmpty
               ? 'Select Birth Place'
               : state.placeOfBirth,
         );
       },
+    );
+  }
+
+  void _setHoroscope(Users state, UsersBloc usersBloc) {
+    final date = DateFormat('yyyy-MM-dd').parse(state.birthDate);
+    final month = Month.values[date.month - 1];
+    final day = date.day;
+
+    final horoscope = findHoroscope(day, month);
+    usersBloc.add(
+      UpdateUsersEvent(
+        state.copyWith(
+          horoscope: horoscope,
+        ),
+      ),
     );
   }
 }
