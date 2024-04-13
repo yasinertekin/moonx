@@ -34,11 +34,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_gemini.svg
   SvgGenImage get icGemini => const SvgGenImage('assets/icons/ic_gemini.svg');
 
+  /// File path: assets/icons/ic_home.svg
+  SvgGenImage get icHome => const SvgGenImage('assets/icons/ic_home.svg');
+
   /// File path: assets/icons/ic_leo.svg
   SvgGenImage get icLeo => const SvgGenImage('assets/icons/ic_leo.svg');
 
   /// File path: assets/icons/ic_libra.svg
   SvgGenImage get icLibra => const SvgGenImage('assets/icons/ic_libra.svg');
+
+  /// File path: assets/icons/ic_meditation.svg
+  SvgGenImage get icMeditation =>
+      const SvgGenImage('assets/icons/ic_meditation.svg');
 
   /// File path: assets/icons/ic_moon.svg
   SvgGenImage get icMoon => const SvgGenImage('assets/icons/ic_moon.svg');
@@ -49,6 +56,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_sagittarius.svg
   SvgGenImage get icSagittarius =>
       const SvgGenImage('assets/icons/ic_sagittarius.svg');
+
+  /// File path: assets/icons/ic_settings.svg
+  SvgGenImage get icSettings =>
+      const SvgGenImage('assets/icons/ic_settings.svg');
 
   /// File path: assets/icons/ic_taurus.svg
   SvgGenImage get icTaurus => const SvgGenImage('assets/icons/ic_taurus.svg');
@@ -61,11 +72,14 @@ class $AssetsIconsGen {
         icAquarius,
         icCancer,
         icGemini,
+        icHome,
         icLeo,
         icLibra,
+        icMeditation,
         icMoon,
         icPisces,
         icSagittarius,
+        icSettings,
         icTaurus,
         icVirgo
       ];
@@ -74,20 +88,34 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/img_birth_date.png
-  AssetGenImage get imgBirthDate =>
-      const AssetGenImage('assets/images/img_birth_date.png');
+  /// File path: assets/images/img_background_onboarding2@3x.png
+  AssetGenImage get imgBackgroundOnboarding23x =>
+      const AssetGenImage('assets/images/img_background_onboarding2@3x.png');
 
-  /// File path: assets/images/img_birth_place..png
-  AssetGenImage get imgBirthPlace =>
-      const AssetGenImage('assets/images/img_birth_place..png');
+  /// File path: assets/images/img_background_onboarding3@3x.png
+  AssetGenImage get imgBackgroundOnboarding33x =>
+      const AssetGenImage('assets/images/img_background_onboarding3@3x.png');
+
+  /// File path: assets/images/img_home_background.png
+  AssetGenImage get imgHomeBackground =>
+      const AssetGenImage('assets/images/img_home_background.png');
+
+  /// File path: assets/images/img_moon.png
+  AssetGenImage get imgMoon =>
+      const AssetGenImage('assets/images/img_moon.png');
 
   /// File path: assets/images/img_welcome.png
   AssetGenImage get imgWelcome =>
       const AssetGenImage('assets/images/img_welcome.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [imgBirthDate, imgBirthPlace, imgWelcome];
+  List<AssetGenImage> get values => [
+        imgBackgroundOnboarding23x,
+        imgBackgroundOnboarding33x,
+        imgHomeBackground,
+        imgMoon,
+        imgWelcome
+      ];
 }
 
 class Assets {
