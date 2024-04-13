@@ -14,6 +14,9 @@ final class AppEnvironment {
 
 /// AppEnvironmentItems
 enum AppEnvironmentItems {
+  /// geminiApiKey
+  geminiApiKey,
+
   /// weatherApiKey
   weatherApiKey;
 
@@ -22,6 +25,8 @@ enum AppEnvironmentItems {
     switch (this) {
       case AppEnvironmentItems.weatherApiKey:
         return AppEnvironment._instance.weatherApiKey;
+      case AppEnvironmentItems.geminiApiKey:
+        return AppEnvironment._instance.geminiApiKey;
     }
   }
 }
