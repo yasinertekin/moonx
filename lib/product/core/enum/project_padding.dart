@@ -47,4 +47,16 @@ enum ProjectPadding {
 
   /// Padding Only Right Getter
   EdgeInsetsGeometry get paddingOnlyRight => _paddingOnlyRight;
+
+  /// Padding only top
+  EdgeInsetsGeometry get _paddingOnlyTop => EdgeInsets.only(top: _value);
+
+  /// Padding Only Top Getter
+  EdgeInsetsGeometry get paddingOnlyTop => _paddingOnlyTop;
+
+  /// Padding only bottom
+  EdgeInsetsGeometry get _paddingOnlyBottom => EdgeInsets.only(bottom: _value);
+
+  /// Padding Only Bottom Getter
+  EdgeInsetsGeometry get paddingOnlyBottom => _paddingOnlyBottom;
 }
