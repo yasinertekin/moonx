@@ -14,6 +14,9 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
+  font_awesome_flutter: ^10.7.0
+  flutter_svg: ^2.0.10+1
+
 
   # State Management
   flutter_bloc: ^8.1.5
@@ -30,6 +33,21 @@ dependencies:
 
   # Google
   json_annotation: ^4.8.1
+
+  # Routing
+  auto_route: ^8.0.3
+  auto_route_generator: ^8.0.0
+
+  # Dependency Injection
+  get_it: ^7.6.8
+
+  # Utils
+  geolocator: ^11.0.0
+  geocoding: ^3.0.0
+  table_calendar: ^3.1.1
+
+  # Network
+  dio: ^5.4.2+1
 
   gen:
     path: package/gen
