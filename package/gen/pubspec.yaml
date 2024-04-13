@@ -18,6 +18,8 @@ dependencies:
 
   # Core
   equatable: ^2.0.5
+  envied: ^0.5.4+1
+  envied_generator: ^0.5.4+1
 
   
 
