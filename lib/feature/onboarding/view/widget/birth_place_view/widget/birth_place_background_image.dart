@@ -9,8 +9,7 @@ final class _BirthPlaceBackgroundImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 0,
+    return Positioned.fill(
       child: ColorFiltered(
         colorFilter: ColorFilter.mode(
           Colors.black.withOpacity(0.3),

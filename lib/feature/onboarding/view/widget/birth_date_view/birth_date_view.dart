@@ -31,12 +31,15 @@ final class _BirthDateBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: context.dynamicHeight(0.45),
+      top: context.dynamicHeight(0.4),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _BirthDateDescription(
             onboarding.description,
+          ),
+          EmptySizedBox(
+            height: context.dynamicHeight(0.03),
           ),
           const _EnterBirthDateText(),
           const EmptySizedBox(),

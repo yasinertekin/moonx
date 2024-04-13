@@ -31,18 +31,20 @@ final class _BirthPlaceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: context.dynamicHeight(0.5),
+      top: context.dynamicHeight(0.4),
       child: Column(
         children: [
           _EnterBirthPlaceText(
             onboarding,
           ),
-          const EmptySizedBox(),
+          EmptySizedBox(
+            height: context.dynamicHeight(0.03),
+          ),
           _BirthPlaceDescription(
             onboarding,
           ),
           EmptySizedBox(
-            height: context.dynamicHeight(0.03),
+            height: context.dynamicHeight(0.05),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
