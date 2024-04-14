@@ -1,6 +1,6 @@
 part of '../home_view.dart';
 
-base mixin UserHoroscopeIconMixin on State<_UserHoroscopeIcon> {
+base mixin _UserHoroscopeIconMixin on State<_UserHoroscopeIcon> {
   Widget _buildUserHoroscopeIcon(Horoscope state) {
     switch (state) {
       case Horoscope.aries:
