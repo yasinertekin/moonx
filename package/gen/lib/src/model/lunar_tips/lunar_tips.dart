@@ -4,25 +4,25 @@ import 'package:gen/src/asset/index.dart';
 
 @immutable
 final class LunarTips with EquatableMixin {
-  final String title;
+  final String? title;
 
-  final Image imagePath;
+  final Image? imagePath;
 
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   final String? description;
 
   final bool isSelect;
 
-  final Image bigImage;
+  final Image? bigImage;
 
   const LunarTips({
-    required this.title,
-    required this.imagePath,
-    required this.backgroundColor,
+    this.title,
+    this.imagePath,
+    this.backgroundColor,
     this.description,
     this.isSelect = false,
-    required this.bigImage,
+    this.bigImage,
   });
 
   /// Lunar Tips List
@@ -85,5 +85,6 @@ final class LunarTips with EquatableMixin {
         backgroundColor,
         description,
         isSelect,
+        bigImage,
       ];
 }
