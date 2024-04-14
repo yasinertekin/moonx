@@ -3,10 +3,10 @@ import 'package:flutter/widgets.dart';
 
 @immutable
 final class PromptResponse with EquatableMixin {
-  final String? promptResponse;
+  final String? text;
 
-  const PromptResponse(this.promptResponse);
+  const PromptResponse(this.text);
 
   @override
-  List<Object?> get props => [promptResponse];
+  List<Object?> get props => [text];
 }
