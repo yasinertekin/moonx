@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
 import 'package:intl/intl.dart';
-import 'package:moonx/feature/home/cubit/gemini/gemini_cubit.dart';
-import 'package:moonx/feature/home/cubit/gemini/gemini_state.dart';
+import 'package:moonx/feature/home/cubit/daily_horoscope/dialy_horoscope_cubit.dart';
 import 'package:moonx/feature/home/cubit/location/location_cubit.dart';
+import 'package:moonx/feature/home/cubit/lunar_tips/lunar_tips_cubit.dart';
+import 'package:moonx/product/core/constants/string_constants.dart';
 import 'package:moonx/product/core/enum/networ_url.dart';
 import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
@@ -17,14 +18,24 @@ import 'package:moonx/product/utils/cache/users_bloc.dart';
 import 'package:moonx/product/utils/cache/users_state.dart';
 import 'package:moonx/product/widget/button/project_button.dart';
 import 'package:moonx/product/widget/container/empty_sized_box.dart';
+import 'package:moonx/product/widget/loading/custom_progress_indicator.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 part 'mixin/user_horoscope_icon_mixin.dart';
-part 'widget/daily_horoscope.dart';
-part 'widget/home_backgorund_image.dart';
-part 'widget/home_banner.dart';
-part 'widget/home_header_view.dart';
-part 'widget/lunar_tips.dart';
+part 'widget/background_image/home_backgorund_image.dart';
+part 'widget/daily_horoscope/daily_horoscope.dart';
+part 'widget/home_banner/home_banner.dart';
+part 'widget/home_header_view/home_header_view.dart';
+part 'widget/home_header_view/widget/date_time_button.dart';
+part 'widget/home_header_view/widget/date_time_text.dart';
+part 'widget/home_header_view/widget/home_calender_widget.dart';
+part 'widget/home_header_view/widget/location_text.dart';
+part 'widget/home_header_view/widget/location_widget.dart';
+part 'widget/home_header_view/widget/moon_image.dart';
+part 'widget/home_header_view/widget/time_based_text.dart';
+part 'widget/home_header_view/widget/weather_text.dart';
+part 'widget/lunar_tips/lunar_tips.dart';
+part 'widget/lunar_tips/lunar_tips_page_view.dart';
 
 @RoutePage()
 final class HomeView extends StatelessWidget {
@@ -76,56 +87,6 @@ final class _HomeScaffold extends StatelessWidget {
             const EmptySizedBox(),
           ],
         ),
-      ),
-    );
-  }
-}
-
-final class _LunarTipsPageView extends StatelessWidget {
-  const _LunarTipsPageView();
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.dynamicHeight(1),
-      child: PageView(
-        children: [
-          Padding(
-            padding: ProjectPadding.low.paddingAll,
-            child: Material(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                side: const BorderSide(
-                  color: ColorName.colorGloomyPurple,
-                  width: 3,
-                ),
-                borderRadius: ProjectRadius.small.borderRadius,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: ProjectPadding.medium.paddingOnlyTopLeft,
-                    child: Assets.images.imgBusiness2.image(
-                      package: 'gen',
-                    ),
-                  ),
-                  Padding(
-                    padding: ProjectPadding.medium.paddingAll,
-                    child: const Text(
-                      maxLines: 40,
-                      'Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profitPlan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and meetings in accordance with the lunar events to gain the most profit. Plan your negotiations, contacts and ',
-                      style: TextStyle(
-                        color: ColorName.colorEmptiness,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
