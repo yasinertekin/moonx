@@ -1,14 +1,16 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
-import 'package:moonx/feature/home/cubit/gemini/gemini_state.dart';
 import 'package:moonx/product/core/service/gemini_service.dart';
 
+part 'daily_horoscope_state.dart';
+
 /// Cubit for Gemini zodiac sign
-final class GeminiCubit extends Cubit<GeminiState> {
+final class DailyHoroscopeCubit extends Cubit<DailyHoroscopeState> {
   /// Constructor
-  GeminiCubit(
+  DailyHoroscopeCubit(
     this._geminiService,
-  ) : super(const GeminiState());
+  ) : super(const DailyHoroscopeState());
 
   /// Gemini service
   final IGeminiService _geminiService;
@@ -34,6 +36,7 @@ final class GeminiCubit extends Cubit<GeminiState> {
           status: GeminiStatus.failure,
         ),
       );
+      print(e);
     }
   }
 }

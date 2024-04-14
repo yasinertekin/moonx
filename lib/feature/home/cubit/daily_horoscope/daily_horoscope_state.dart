@@ -1,8 +1,7 @@
-import 'package:equatable/equatable.dart';
-import 'package:gen/gen.dart';
+part of 'dialy_horoscope_cubit.dart';
 
-final class GeminiState extends Equatable {
-  const GeminiState({
+final class DailyHoroscopeState extends Equatable {
+  const DailyHoroscopeState({
     this.isLoading = false,
     this.errorMessage = '',
     this.promptResponse,
@@ -16,13 +15,13 @@ final class GeminiState extends Equatable {
 
   final GeminiStatus status;
 
-  GeminiState copyWith({
+  DailyHoroscopeState copyWith({
     bool? isLoading,
     String? errorMessage,
     PromptResponse? promptResponse,
     GeminiStatus? status,
   }) {
-    return GeminiState(
+    return DailyHoroscopeState(
       isLoading: isLoading ?? this.isLoading,
       errorMessage: errorMessage ?? this.errorMessage,
       promptResponse: promptResponse ?? this.promptResponse,
