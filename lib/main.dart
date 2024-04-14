@@ -1,27 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:moonx/feature/home/cubit/gemini/gemini_cubit.dart';
 import 'package:moonx/locator.dart';
 import 'package:moonx/product/core/initialize/project_initializer.dart';
-import 'package:moonx/product/core/service/gemini_service.dart';
-import 'package:moonx/product/utils/cache/users_bloc.dart';
+import 'package:moonx/product/core/initialize/state_initialize.dart';
 import 'package:moonx/product/utils/theme/app_theme.dart';
 
 Future<void> main() async {
   await ProjectInitializer.initialize();
   runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider<UsersBloc>(
-          create: (context) => Locator.usersBloc,
-        ),
-        BlocProvider<GeminiCubit>(
-          create: (context) => GeminiCubit(
-            GeminiServiceImpl(),
-          ),
-        ),
-      ],
-      child: const _MoonX(),
+    const StateInitialize(
+      child: _MoonX(),
     ),
   );
 }
