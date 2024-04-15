@@ -18,8 +18,8 @@ final class _SelectBirthTimeButton extends StatelessWidget {
               },
             );
           },
-          title:
-              state.birthTime.isEmpty ? 'Select Birth Time' : state.birthTime,
+          title: state.birthTime.isEmpty ? '09/03/1999' : state.birthTime,
+          titleColor: ColorName.colorDhusarGrey,
         );
       },
     );
