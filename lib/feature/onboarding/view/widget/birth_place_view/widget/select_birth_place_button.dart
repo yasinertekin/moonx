@@ -35,6 +35,7 @@ final class _SelectBirthPlaceButtonState extends State<_SelectBirthPlaceButton>
           title: state.placeOfBirth.isEmpty
               ? 'Select Birth Place'
               : state.placeOfBirth,
+          titleColor: ColorName.colorDhusarGrey,
         );
       },
     );
