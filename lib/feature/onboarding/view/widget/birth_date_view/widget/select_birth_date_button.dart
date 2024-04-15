@@ -44,8 +44,8 @@ final class _SelectBirthDateButtonState extends State<_SelectBirthDateButton>
           onPressed: () {
             showCustomCupertinoModal(context);
           },
-          title:
-              state.birthDate.isEmpty ? 'Select Birth Date' : state.birthDate,
+          title: state.birthDate.isEmpty ? '09/03/1999' : state.birthDate,
+          titleColor: ColorName.colorDhusarGrey,
         );
       },
     );
