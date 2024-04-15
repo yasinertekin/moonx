@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 /// ProjectRadius Enum
 enum ProjectRadius {
-  /// Small radius 15 px
-  small(15),
+  /// Small radius 10 px
+  small(10),
 
-  /// Medium radius 30 px
-  medium(30),
+  /// Medium radius 20 px
+  medium(20),
 
-  /// Large radius 45 px
-  large(45);
+  /// Large radius 30 px
+  large(30);
 
   final double _value;
 
