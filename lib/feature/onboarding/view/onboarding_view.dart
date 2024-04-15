@@ -10,6 +10,7 @@ import 'package:moonx/product/core/enum/month.dart';
 import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
 import 'package:moonx/product/core/extension/scaffold_messenger_extension.dart';
+import 'package:moonx/product/core/mixin/horoscope_mixin.dart';
 import 'package:moonx/product/utils/cache/users_bloc.dart';
 import 'package:moonx/product/utils/cache/users_event.dart';
 import 'package:moonx/product/utils/cache/users_state.dart';
