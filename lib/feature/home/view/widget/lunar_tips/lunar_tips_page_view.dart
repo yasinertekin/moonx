@@ -43,8 +43,8 @@ final class _LunarTipsPageViewItem extends StatelessWidget {
     return Material(
       elevation: 5,
       shape: RoundedRectangleBorder(
-        side: BorderSide(
-          color: lunarTips.backgroundColor ?? ColorName.colorGloomyPurple,
+        side: const BorderSide(
+          color: ColorName.colorGloomyPurple,
           width: 3,
         ),
         borderRadius: ProjectRadius.small.borderRadius,
@@ -73,7 +73,7 @@ final class _LunarBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         switch (state.lunarTipsStatus) {
           case LunarTipsStatus.loading:
-            return const Center(child: CircularProgressIndicator());
+            return const CustomProgressIndicator();
           case LunarTipsStatus.success:
             return _LunarHoroscopeDescription(lunarTips: lunarTips);
           case LunarTipsStatus.failure:
@@ -114,14 +114,16 @@ final class _LunarHoroscopeDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: ProjectPadding.medium.paddingAll,
-      child: Text(
-        maxLines: 35,
-        lunarTips.description ?? '',
-        style: const TextStyle(
-          color: ColorName.colorEmptiness,
-          fontSize: 14,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: ProjectPadding.medium.paddingAll,
+        child: Text(
+          maxLines: 30,
+          lunarTips.description ?? '',
+          style: const TextStyle(
+            color: ColorName.colorEmptiness,
+            fontSize: 14,
+          ),
         ),
       ),
     );
