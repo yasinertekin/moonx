@@ -50,6 +50,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_moon.svg
   SvgGenImage get icMoon => const SvgGenImage('assets/icons/ic_moon.svg');
 
+  /// File path: assets/icons/ic_moon_small_down.svg
+  SvgGenImage get icMoonSmallDown =>
+      const SvgGenImage('assets/icons/ic_moon_small_down.svg');
+
+  /// File path: assets/icons/ic_moon_small_up.svg
+  SvgGenImage get icMoonSmallUp =>
+      const SvgGenImage('assets/icons/ic_moon_small_up.svg');
+
   /// File path: assets/icons/ic_pisces.svg
   SvgGenImage get icPisces => const SvgGenImage('assets/icons/ic_pisces.svg');
 
@@ -60,6 +68,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_settings.svg
   SvgGenImage get icSettings =>
       const SvgGenImage('assets/icons/ic_settings.svg');
+
+  /// File path: assets/icons/ic_small_sun_down.svg
+  SvgGenImage get icSmallSunDown =>
+      const SvgGenImage('assets/icons/ic_small_sun_down.svg');
+
+  /// File path: assets/icons/ic_small_sun_up.svg
+  SvgGenImage get icSmallSunUp =>
+      const SvgGenImage('assets/icons/ic_small_sun_up.svg');
 
   /// File path: assets/icons/ic_taurus.svg
   SvgGenImage get icTaurus => const SvgGenImage('assets/icons/ic_taurus.svg');
@@ -77,9 +93,13 @@ class $AssetsIconsGen {
         icLibra,
         icMeditation,
         icMoon,
+        icMoonSmallDown,
+        icMoonSmallUp,
         icPisces,
         icSagittarius,
         icSettings,
+        icSmallSunDown,
+        icSmallSunUp,
         icTaurus,
         icVirgo
       ];
@@ -120,6 +140,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgHomeBanner =>
       const AssetGenImage('assets/images/img_home_banner.png');
 
+  /// File path: assets/images/img_medidation_background.png
+  AssetGenImage get imgMedidationBackground =>
+      const AssetGenImage('assets/images/img_medidation_background.png');
+
   /// File path: assets/images/img_moon.png
   AssetGenImage get imgMoon =>
       const AssetGenImage('assets/images/img_moon.png');
@@ -131,6 +155,22 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_relations2.png
   AssetGenImage get imgRelations2 =>
       const AssetGenImage('assets/images/img_relations2.png');
+
+  /// File path: assets/images/img_small_moon_down.png
+  AssetGenImage get imgSmallMoonDown =>
+      const AssetGenImage('assets/images/img_small_moon_down.png');
+
+  /// File path: assets/images/img_small_moon_up.png
+  AssetGenImage get imgSmallMoonUp =>
+      const AssetGenImage('assets/images/img_small_moon_up.png');
+
+  /// File path: assets/images/img_small_sun_down.png
+  AssetGenImage get imgSmallSunDown =>
+      const AssetGenImage('assets/images/img_small_sun_down.png');
+
+  /// File path: assets/images/img_small_sun_up.png
+  AssetGenImage get imgSmallSunUp =>
+      const AssetGenImage('assets/images/img_small_sun_up.png');
 
   /// File path: assets/images/img_welcome.png
   AssetGenImage get imgWelcome =>
@@ -146,9 +186,14 @@ class $AssetsImagesGen {
         imgFood2,
         imgHomeBackground,
         imgHomeBanner,
+        imgMedidationBackground,
         imgMoon,
         imgRelations,
         imgRelations2,
+        imgSmallMoonDown,
+        imgSmallMoonUp,
+        imgSmallSunDown,
+        imgSmallSunUp,
         imgWelcome
       ];
 }

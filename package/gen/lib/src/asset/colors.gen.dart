@@ -13,6 +13,9 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
+  /// Color: #2e2f42
+  static const Color colorAtlanticCharter = Color(0xFF2E2F42);
+
   /// Color: #E2E3E3
   static const Color colorColdWind = Color(0xFFE2E3E3);
 
@@ -42,6 +45,9 @@ class ColorName {
 
   /// Color: #ebebeb
   static const Color colorMercury = Color(0xFFEBEBEB);
+
+  /// Color: #191919
+  static const Color colorThamarBlack = Color(0xFF191919);
 
   /// Color: #535fd8
   static const Color colorThickBlue = Color(0xFF535FD8);
