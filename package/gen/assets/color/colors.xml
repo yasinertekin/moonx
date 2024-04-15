@@ -11,5 +11,9 @@
     <color name="colorEeriaBlack">#1a1a1a</color>
     <color name="colorGloomyPurple">#8e53d8</color>
     <color name="colorGluttony">#f07a22</color>
+    <color name="colorThamarBlack">#191919</color>
+    <color name="colorAtlanticCharter">#2e2f42</color>
+
+    
     
 </resources>
