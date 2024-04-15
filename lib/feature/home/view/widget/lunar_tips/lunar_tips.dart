@@ -56,13 +56,11 @@ final class _LunarTipsLCustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: context.dynamicWidth(0.35),
+      width: context.dynamicWidth(0.38),
       child: ListTile(
         onTap: () => context.read<LunarTipsCubit>().changePage(index),
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
-          ),
+        shape: RoundedRectangleBorder(
+          borderRadius: ProjectRadius.small.borderRadius,
         ),
         title: Text(
           lunarTips.title ?? '',
