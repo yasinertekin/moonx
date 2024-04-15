@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
 import 'package:intl/intl.dart';
 import 'package:moonx/feature/home/cubit/daily_horoscope/dialy_horoscope_cubit.dart';
+import 'package:moonx/feature/home/cubit/home_header/home_header_cubit.dart';
 import 'package:moonx/feature/home/cubit/location/location_cubit.dart';
 import 'package:moonx/feature/home/cubit/lunar_tips/lunar_tips_cubit.dart';
 import 'package:moonx/product/core/constants/string_constants.dart';
@@ -84,7 +85,6 @@ final class _HomeScaffold extends StatelessWidget {
             const _DailyHoroscope(),
             const _LunarTips(),
             const _LunarTipsPageView(),
-            const EmptySizedBox(),
           ],
         ),
       ),

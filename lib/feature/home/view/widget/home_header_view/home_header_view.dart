@@ -8,58 +8,47 @@ final class _HomeHeaderView extends StatefulWidget {
 }
 
 final class _HomeHeaderViewState extends State<_HomeHeaderView> {
-  late final PageController _pageController;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _pageController.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _DateTimeButton(
-          _pageController,
-        ),
-        const EmptySizedBox(),
-        _HomeHeaderPageBuilder(pageController: _pageController),
-      ],
-    );
-  }
-}
-
-final class _HomeHeaderPageBuilder extends StatelessWidget {
-  const _HomeHeaderPageBuilder({
-    required PageController pageController,
-  }) : _pageController = pageController;
-
-  final PageController _pageController;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: context.dynamicHeight(0.58),
-      child: PageView.builder(
-        controller: _pageController,
-        physics: const NeverScrollableScrollPhysics(),
-        itemCount: _HomeHeader.values.length,
-        itemBuilder: (context, index) {
-          return _HomeHeader.values[index].widget;
-        },
+    return BlocProvider<HomeHeaderCubit>(
+      create: (context) => HomeHeaderCubit(),
+      child: const Column(
+        children: [
+          _DateTimeButton(),
+          EmptySizedBox(),
+          _HomeHeaderPageBuilder(),
+        ],
       ),
     );
   }
 }
 
-enum _HomeHeader {
+final class _HomeHeaderPageBuilder extends StatelessWidget {
+  const _HomeHeaderPageBuilder();
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<HomeHeaderCubit, HomeHeaderState>(
+      builder: (context, state) {
+        return SizedBox(
+          height: state.index == HomeHeader.location
+              ? context.dynamicHeight(0.51)
+              : context.dynamicHeight(0.58),
+          child: PageView.builder(
+            controller: state.pageController,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: HomeHeader.values.length,
+            itemBuilder: (context, index) {
+              return HomeHeader.values[index].widget;
+            },
+          ),
+        );
+      },
+    );
+  }
+}
+
+enum HomeHeader {
   location(_LocationWidget()),
 
   calendar(_HomeCalenderWidget());
@@ -67,5 +56,5 @@ enum _HomeHeader {
   final Widget widget;
 
   // ignore: sort_constructors_first
-  const _HomeHeader(this.widget);
+  const HomeHeader(this.widget);
 }
