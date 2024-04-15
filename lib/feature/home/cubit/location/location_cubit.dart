@@ -9,7 +9,9 @@ import 'package:moonx/product/core/service/weather_service.dart';
 
 part 'location_state.dart';
 
+/// Cubit responsible for managing the location state.
 final class LocationCubit extends Cubit<LocationState> {
+  /// Initializes the location cubit.
   LocationCubit(this._locationService, this._weatherService)
       : super(const LocationState()) {
     _getLocation();
@@ -19,14 +21,14 @@ final class LocationCubit extends Cubit<LocationState> {
 
   final IWeatherService _weatherService;
 
-  /// Fetch Weather
+  /// Fetches the weather for the current location.
   Future<void> fetchWeather() async {
     final location = state.locationDetails.first;
     await _weatherService
         .fetchWeather(location.subAdministrativeArea ?? 'Edirne');
   }
 
-  /// Get current location
+  /// Gets the current location.
   Future<void> _getCurrentLocation() async {
     final permission = await _locationService.checkPermission();
     if (!permission) {
@@ -42,12 +44,13 @@ final class LocationCubit extends Cubit<LocationState> {
     );
   }
 
+  /// Gets the location and location details.
   Future<void> _getLocation() async {
     await _getCurrentLocation();
     await getLocationDetails();
   }
 
-  /// Request Location Permission
+  /// Requests location permission.
   Future<void> requestPermission() async {
     final permission = await _locationService.checkPermission();
     if (!permission) {
@@ -57,7 +60,7 @@ final class LocationCubit extends Cubit<LocationState> {
     await _getLocation();
   }
 
-  /// Get Location Details
+  /// Gets the location details.
   Future<void> getLocationDetails() async {
     if (state.position == null) return;
     try {
@@ -76,7 +79,6 @@ final class LocationCubit extends Cubit<LocationState> {
       );
     } catch (e) {
       emit(state.copyWith(status: LocationStatus.locationError));
-      print(e);
     }
   }
 }
