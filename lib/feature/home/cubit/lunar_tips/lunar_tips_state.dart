@@ -53,5 +53,6 @@ enum LunarTipsStatus {
   /// The status when the lunar tips are loading
   failure,
 
+  /// The status when the lunar tips are
   loading,
 }

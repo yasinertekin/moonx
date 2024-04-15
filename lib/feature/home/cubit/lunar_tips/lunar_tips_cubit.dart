@@ -6,8 +6,11 @@ import 'package:moonx/product/core/service/gemini_service.dart';
 
 part 'lunar_tips_state.dart';
 
+/// Cubit responsible for managing the state of lunar tips.
 final class LunarTipsCubit extends Cubit<LunarTipsState> {
-  /// Constructor for [LunarTipsCubit]
+  /// Constructor for [LunarTipsCubit].
+  ///
+  /// [geminiService] - The service to get the lunar tips.
   LunarTipsCubit(this._geminiService)
       : super(
           LunarTipsState(
@@ -19,10 +22,12 @@ final class LunarTipsCubit extends Cubit<LunarTipsState> {
     fetchLunarTips(0);
   }
 
-  /// The service to get the lunar tips
+  /// The service to get the lunar tips.
   final IGeminiService _geminiService;
 
-  /// Fetches the lunar tips
+  /// Fetches the lunar tips.
+  ///
+  /// [index] - The index of the lunar tip to fetch.
   Future<void> fetchLunarTips(int index) async {
     emit(state.copyWith(lunarTipsStatus: LunarTipsStatus.loading));
     try {
@@ -51,7 +56,9 @@ final class LunarTipsCubit extends Cubit<LunarTipsState> {
     }
   }
 
-  /// Changes the page of the lunar tips
+  /// Changes the page of the lunar tips.
+  ///
+  /// [index] - The index of the page to change to.
   void changePage(int index) {
     state.pageController.animateToPage(
       index,
