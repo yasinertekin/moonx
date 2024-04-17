@@ -21,4 +21,10 @@ enum ProjectRadius {
 
   /// BorderRadius Getter
   BorderRadius get borderRadius => _borderRadius;
+
+  /// Only left and Right bottom BorderRadius Getter
+  BorderRadius get bottomLeftRightBorderRadius => BorderRadius.only(
+        bottomLeft: _borderRadius.bottomLeft,
+        bottomRight: _borderRadius.bottomRight,
+      );
 }

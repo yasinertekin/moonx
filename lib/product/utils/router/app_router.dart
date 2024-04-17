@@ -17,13 +17,7 @@ final class AppRouter extends $AppRouter {
               page: MeditationRoute.page,
               children: [
                 AdaptiveRoute(
-                  page: MusicRoute.page,
-                ),
-                AdaptiveRoute(
-                  page: YogaRoute.page,
-                ),
-                AdaptiveRoute(
-                  page: MedidationsRoute.page,
+                  page: MedidationsCustomRoute.page,
                 ),
               ],
             ),
@@ -31,6 +25,9 @@ final class AppRouter extends $AppRouter {
               page: ProfileRoute.page,
             ),
           ],
+        ),
+        AdaptiveRoute(
+          page: MedidationDetailRoute.page,
         ),
         AdaptiveRoute(
           page: SplashRoute.page,

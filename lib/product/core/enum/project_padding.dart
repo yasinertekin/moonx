@@ -40,6 +40,9 @@ enum ProjectPadding {
   EdgeInsetsGeometry get _paddingOnlyLeft => EdgeInsets.only(left: _value);
 
   /// Padding Only Left Getter
+  EdgeInsetsGeometry get paddingOnlyLeft => _paddingOnlyLeft;
+
+  /// Padding Only Left Getter
   EdgeInsetsGeometry get paddingOnly => _paddingOnlyLeft;
 
   /// Padding only right

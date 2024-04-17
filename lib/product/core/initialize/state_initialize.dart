@@ -3,11 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moonx/feature/home/cubit/daily_horoscope/dialy_horoscope_cubit.dart';
 import 'package:moonx/feature/home/cubit/location/location_cubit.dart';
 import 'package:moonx/feature/home/cubit/lunar_tips/lunar_tips_cubit.dart';
+import 'package:moonx/feature/meditation/cubit/sound_cubit.dart';
 import 'package:moonx/locator.dart';
 import 'package:moonx/product/core/enum/networ_url.dart';
 import 'package:moonx/product/core/manager/dio_manager.dart';
 import 'package:moonx/product/core/service/gemini_service.dart';
 import 'package:moonx/product/core/service/location_service.dart';
+import 'package:moonx/product/core/service/sound_service.dart';
 import 'package:moonx/product/core/service/weather_service.dart';
 import 'package:moonx/product/utils/cache/users_bloc.dart';
 
@@ -25,7 +27,7 @@ final class StateInitialize extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: <BlocProvider>[
+      providers: [
         BlocProvider<UsersBloc>(
           create: (context) => Locator.usersBloc,
         ),
@@ -49,6 +51,16 @@ final class StateInitialize extends StatelessWidget {
             GeminiServiceImpl(),
           ),
         ),
+        BlocProvider<SoundCubit>(
+          create: (context) => SoundCubit(
+            soundService: SoundServiceImpl(),
+          )..updateTimer(),
+        ),
+        // BlocListener<SoundCubit, SoundState>(
+        //   listener: (context, state) {
+        //     context.read<SoundCubit>().updateTimer();
+        //   },
+        // ),
       ],
       child: child,
     );

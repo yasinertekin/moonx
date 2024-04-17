@@ -5,7 +5,9 @@ import 'package:moonx/product/core/enum/nav_bar_routes.dart';
 
 @RoutePage()
 final class NavBarView extends StatelessWidget {
-  const NavBarView({super.key});
+  const NavBarView({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
