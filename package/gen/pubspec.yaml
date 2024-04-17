@@ -21,6 +21,9 @@ dependencies:
   envied: ^0.5.4+1
   envied_generator: ^0.5.4+1
 
+  # Audio
+  audioplayers: ^6.0.0
+
   
 
 dev_dependencies:
