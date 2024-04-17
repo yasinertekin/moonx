@@ -61,6 +61,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_pisces.svg
   SvgGenImage get icPisces => const SvgGenImage('assets/icons/ic_pisces.svg');
 
+  /// File path: assets/icons/ic_play_button.svg
+  SvgGenImage get icPlayButton =>
+      const SvgGenImage('assets/icons/ic_play_button.svg');
+
   /// File path: assets/icons/ic_sagittarius.svg
   SvgGenImage get icSagittarius =>
       const SvgGenImage('assets/icons/ic_sagittarius.svg');
@@ -96,6 +100,7 @@ class $AssetsIconsGen {
         icMoonSmallDown,
         icMoonSmallUp,
         icPisces,
+        icPlayButton,
         icSagittarius,
         icSettings,
         icSmallSunDown,
@@ -107,6 +112,18 @@ class $AssetsIconsGen {
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
+
+  /// File path: assets/images/img_background1.png
+  AssetGenImage get imgBackground1 =>
+      const AssetGenImage('assets/images/img_background1.png');
+
+  /// File path: assets/images/img_background2.png
+  AssetGenImage get imgBackground2 =>
+      const AssetGenImage('assets/images/img_background2.png');
+
+  /// File path: assets/images/img_background3.png
+  AssetGenImage get imgBackground3 =>
+      const AssetGenImage('assets/images/img_background3.png');
 
   /// File path: assets/images/img_background_onboarding2@3x.png
   AssetGenImage get imgBackgroundOnboarding23x =>
@@ -144,9 +161,33 @@ class $AssetsImagesGen {
   AssetGenImage get imgMedidationBackground =>
       const AssetGenImage('assets/images/img_medidation_background.png');
 
+  /// File path: assets/images/img_meditation.png
+  AssetGenImage get imgMeditation =>
+      const AssetGenImage('assets/images/img_meditation.png');
+
+  /// File path: assets/images/img_meditation2.png
+  AssetGenImage get imgMeditation2 =>
+      const AssetGenImage('assets/images/img_meditation2.png');
+
   /// File path: assets/images/img_moon.png
   AssetGenImage get imgMoon =>
       const AssetGenImage('assets/images/img_moon.png');
+
+  /// File path: assets/images/img_music1.png
+  AssetGenImage get imgMusic1 =>
+      const AssetGenImage('assets/images/img_music1.png');
+
+  /// File path: assets/images/img_music2.png
+  AssetGenImage get imgMusic2 =>
+      const AssetGenImage('assets/images/img_music2.png');
+
+  /// File path: assets/images/img_music3.png
+  AssetGenImage get imgMusic3 =>
+      const AssetGenImage('assets/images/img_music3.png');
+
+  /// File path: assets/images/img_music4.png
+  AssetGenImage get imgMusic4 =>
+      const AssetGenImage('assets/images/img_music4.png');
 
   /// File path: assets/images/img_relations.png
   AssetGenImage get imgRelations =>
@@ -178,6 +219,9 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        imgBackground1,
+        imgBackground2,
+        imgBackground3,
         imgBackgroundOnboarding23x,
         imgBackgroundOnboarding33x,
         imgBusiness,
@@ -187,7 +231,13 @@ class $AssetsImagesGen {
         imgHomeBackground,
         imgHomeBanner,
         imgMedidationBackground,
+        imgMeditation,
+        imgMeditation2,
         imgMoon,
+        imgMusic1,
+        imgMusic2,
+        imgMusic3,
+        imgMusic4,
         imgRelations,
         imgRelations2,
         imgSmallMoonDown,

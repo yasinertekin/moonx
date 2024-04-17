@@ -4,5 +4,7 @@ export 'lunar_tips/lunar_tips.dart';
 export 'onboarding/onboarding.dart';
 export 'prompt/prompt.dart';
 export 'prompt_response/prompt_response.dart';
+export 'sound/sound.dart';
+export 'sound_list/sound_list.dart';
 export 'users/users.dart';
 export 'weather/weather.dart';
