@@ -46,9 +46,13 @@ dependencies:
   geolocator: ^11.0.0
   geocoding: ^3.0.0
   table_calendar: ^3.1.1
+  glass: ^2.0.0+1
 
   # Network
   dio: ^5.4.2+1
+
+  # Audio
+  audioplayers: ^6.0.0
 
   gen:
     path: package/gen
@@ -66,3 +70,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/
