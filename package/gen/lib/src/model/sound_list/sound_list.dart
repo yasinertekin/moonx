@@ -31,7 +31,7 @@ final class SoundList extends Equatable {
 @immutable
 final class SoundLists {
   const SoundLists._();
-  static SoundCategory soundCategory = SoundCategory(
+  static SoundCategory medidation = SoundCategory(
     title: 'Medidation',
     soundLists: [
       SoundList(
@@ -40,22 +40,26 @@ final class SoundLists {
           Sound(
             title: 'Lorem Ipsum',
             subtitle: 'Lorem Ipsum',
-            smallImageUrl: Assets.images.imgMeditation.image(
+            smallImage: Assets.images.imgMeditation.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground2.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: '2:34',
+            voiceLength: 220.0,
           ),
           Sound(
             title: 'Lorem Ipsum',
             subtitle: 'Lorem Ipsum',
-            smallImageUrl: Assets.images.imgMeditation.image(
+            smallImage: Assets.images.imgMeditation.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground2.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: '2:34',
+            voiceLength: 220.0,
           ),
         ],
       ),
@@ -65,28 +69,32 @@ final class SoundLists {
           Sound(
             title: 'Lorem Ipsum',
             subtitle: 'Lorem Ipsum',
-            smallImageUrl: Assets.images.imgMeditation2.image(
+            smallImage: Assets.images.imgMeditation2.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground1.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: '2:34',
+            voiceLength: 220.0,
           ),
           Sound(
             title: 'Lorem Ipsum',
             subtitle: 'Lorem Ipsum',
-            smallImageUrl: Assets.images.imgMeditation2.image(
+            smallImage: Assets.images.imgMeditation2.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground1.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.serdarOrtacSeytan.asset,
-            voiceLength: '2:34',
+            voiceLength: 309,
           ),
         ],
       ),
     ],
   );
-  static SoundCategory yoga = SoundCategory(
+  static SoundCategory music = SoundCategory(
     title: 'Yoga',
     soundLists: [
       SoundList(
@@ -95,28 +103,32 @@ final class SoundLists {
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMeditation.image(
+            smallImage: Assets.images.imgMeditation.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground2.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.serdarOrtacSeytan.asset,
-            voiceLength: '',
+            voiceLength: 309,
           ),
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMeditation.image(
+            smallImage: Assets.images.imgMeditation.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground2.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: '',
+            voiceLength: 220.0,
           ),
         ],
       ),
     ],
   );
-  static SoundCategory music = SoundCategory(
+  static SoundCategory yoga = SoundCategory(
     title: 'Music',
     soundLists: [
       SoundList(
@@ -125,42 +137,50 @@ final class SoundLists {
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMusic1.image(
+            smallImage: Assets.images.imgMusic1.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground3.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.serdarOrtacSeytan.asset,
-            voiceLength: '',
+            voiceLength: 309,
           ),
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMusic2.image(
+            smallImage: Assets.images.imgMusic2.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground3.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
-            voiceLength: '',
+            voiceLength: 228,
           ),
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMusic3.image(
+            smallImage: Assets.images.imgMusic3.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground3.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
-            voiceLength: '',
+            voiceLength: 228,
           ),
           Sound(
             title: 'Title',
             subtitle: 'Subtitle',
-            smallImageUrl: Assets.images.imgMusic4.image(
+            smallImage: Assets.images.imgMusic4.image(
               package: 'gen',
             ),
-            image: '',
+            bigImage: Assets.images.imgBackground3.image(
+              package: 'gen',
+            ),
             audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
-            voiceLength: '',
+            voiceLength: 228,
           ),
         ],
       ),

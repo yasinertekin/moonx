@@ -31,6 +31,9 @@ class ColorName {
   /// Color: #FCFCFC
   static const Color colorEmptiness = Color(0xFFFCFCFC);
 
+  /// Color: #505050
+  static const Color colorFiftiethShadeOfGrey = Color(0xFF505050);
+
   /// Color: #8e53d8
   static const Color colorGloomyPurple = Color(0xFF8E53D8);
 
@@ -48,6 +51,9 @@ class ColorName {
 
   /// Color: #191919
   static const Color colorThamarBlack = Color(0xFF191919);
+
+  /// Color: #2a2a2a
+  static const Color colorTheEnd = Color(0xFF2A2A2A);
 
   /// Color: #535fd8
   static const Color colorThickBlue = Color(0xFF535FD8);

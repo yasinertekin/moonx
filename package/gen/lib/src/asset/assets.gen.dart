@@ -113,6 +113,22 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/btn_back_playlist.png
+  AssetGenImage get btnBackPlaylist =>
+      const AssetGenImage('assets/images/btn_back_playlist.png');
+
+  /// File path: assets/images/btn_next_playlist.png
+  AssetGenImage get btnNextPlaylist =>
+      const AssetGenImage('assets/images/btn_next_playlist.png');
+
+  /// File path: assets/images/btn_play_playlist.png
+  AssetGenImage get btnPlayPlaylist =>
+      const AssetGenImage('assets/images/btn_play_playlist.png');
+
+  /// File path: assets/images/btn_refresh_playlist.png
+  AssetGenImage get btnRefreshPlaylist =>
+      const AssetGenImage('assets/images/btn_refresh_playlist.png');
+
   /// File path: assets/images/img_background1.png
   AssetGenImage get imgBackground1 =>
       const AssetGenImage('assets/images/img_background1.png');
@@ -133,6 +149,26 @@ class $AssetsImagesGen {
   AssetGenImage get imgBackgroundOnboarding33x =>
       const AssetGenImage('assets/images/img_background_onboarding3@3x.png');
 
+  /// File path: assets/images/img_btn_close.png
+  AssetGenImage get imgBtnClose =>
+      const AssetGenImage('assets/images/img_btn_close.png');
+
+  /// File path: assets/images/img_btn_drop_down.png
+  AssetGenImage get imgBtnDropDown =>
+      const AssetGenImage('assets/images/img_btn_drop_down.png');
+
+  /// File path: assets/images/img_btn_pause2.png
+  AssetGenImage get imgBtnPause2 =>
+      const AssetGenImage('assets/images/img_btn_pause2.png');
+
+  /// File path: assets/images/img_btn_pause_button.png
+  AssetGenImage get imgBtnPauseButton =>
+      const AssetGenImage('assets/images/img_btn_pause_button.png');
+
+  /// File path: assets/images/img_btn_play2.png
+  AssetGenImage get imgBtnPlay2 =>
+      const AssetGenImage('assets/images/img_btn_play2.png');
+
   /// File path: assets/images/img_business.png
   AssetGenImage get imgBusiness =>
       const AssetGenImage('assets/images/img_business.png');
@@ -140,6 +176,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_business2.png
   AssetGenImage get imgBusiness2 =>
       const AssetGenImage('assets/images/img_business2.png');
+
+  /// File path: assets/images/img_fav.png
+  AssetGenImage get imgFav => const AssetGenImage('assets/images/img_fav.png');
 
   /// File path: assets/images/img_food.png
   AssetGenImage get imgFood =>
@@ -219,13 +258,23 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+        btnBackPlaylist,
+        btnNextPlaylist,
+        btnPlayPlaylist,
+        btnRefreshPlaylist,
         imgBackground1,
         imgBackground2,
         imgBackground3,
         imgBackgroundOnboarding23x,
         imgBackgroundOnboarding33x,
+        imgBtnClose,
+        imgBtnDropDown,
+        imgBtnPause2,
+        imgBtnPauseButton,
+        imgBtnPlay2,
         imgBusiness,
         imgBusiness2,
+        imgFav,
         imgFood,
         imgFood2,
         imgHomeBackground,
