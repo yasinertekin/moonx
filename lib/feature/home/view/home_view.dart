@@ -20,6 +20,8 @@ import 'package:moonx/product/utils/cache/users_state.dart';
 import 'package:moonx/product/widget/button/project_button.dart';
 import 'package:moonx/product/widget/container/empty_sized_box.dart';
 import 'package:moonx/product/widget/loading/custom_progress_indicator.dart';
+import 'package:moonx/product/widget/now_playing/now_playing_bar.dart';
+import 'package:moonx/product/widget/now_playing/now_playing_slide_bar.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 part 'mixin/user_horoscope_icon_mixin.dart';
@@ -58,9 +60,12 @@ final class HomeView extends StatelessWidget {
         ),
       ],
       child: const Stack(
+        fit: StackFit.expand,
         children: [
           _HomeBackgroundImage(),
           _HomeScaffold(),
+          NowPlayingBar(),
+          NowPlayingSlideBar(),
         ],
       ),
     );
