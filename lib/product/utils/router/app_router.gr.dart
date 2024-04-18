@@ -39,7 +39,6 @@ abstract class $AppRouter extends _i9.RootStackRouter {
         routeData: routeData,
         child: _i2.MedidationDetailView(
           sound: args.sound,
-          soundLists: args.soundLists,
           key: args.key,
         ),
       );
@@ -107,14 +106,12 @@ class MedidationDetailRoute
     extends _i9.PageRouteInfo<MedidationDetailRouteArgs> {
   MedidationDetailRoute({
     required _i10.Sound sound,
-    required _i10.SoundCategory soundLists,
     _i11.Key? key,
     List<_i9.PageRouteInfo>? children,
   }) : super(
           MedidationDetailRoute.name,
           args: MedidationDetailRouteArgs(
             sound: sound,
-            soundLists: soundLists,
             key: key,
           ),
           initialChildren: children,
@@ -129,19 +126,16 @@ class MedidationDetailRoute
 class MedidationDetailRouteArgs {
   const MedidationDetailRouteArgs({
     required this.sound,
-    required this.soundLists,
     this.key,
   });
 
   final _i10.Sound sound;
 
-  final _i10.SoundCategory soundLists;
-
   final _i11.Key? key;
 
   @override
   String toString() {
-    return 'MedidationDetailRouteArgs{sound: $sound, soundLists: $soundLists, key: $key}';
+    return 'MedidationDetailRouteArgs{sound: $sound, key: $key}';
   }
 }
 

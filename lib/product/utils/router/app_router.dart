@@ -6,17 +6,19 @@ import 'package:moonx/product/utils/router/app_router.gr.dart';
 /// AppRouter
 final class AppRouter extends $AppRouter {
   @override
-  List<AdaptiveRoute> get routes => [
-        AdaptiveRoute(
+  List<CustomRoute> get routes => [
+        CustomRoute(
           page: NavBarRoute.page,
+          transitionsBuilder: TransitionsBuilders.fadeIn,
           children: [
             AdaptiveRoute(
               page: HomeRoute.page,
             ),
-            AdaptiveRoute(
+            CustomRoute(
               page: MeditationRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
               children: [
-                AdaptiveRoute(
+                CustomRoute(
                   page: MedidationsCustomRoute.page,
                 ),
               ],
@@ -26,14 +28,15 @@ final class AppRouter extends $AppRouter {
             ),
           ],
         ),
-        AdaptiveRoute(
+        CustomRoute(
+          transitionsBuilder: TransitionsBuilders.slideBottom,
           page: MedidationDetailRoute.page,
         ),
-        AdaptiveRoute(
+        CustomRoute(
           page: SplashRoute.page,
           initial: true,
         ),
-        AdaptiveRoute(
+        CustomRoute(
           page: OnboardingRoute.page,
         ),
       ];
