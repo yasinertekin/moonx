@@ -92,8 +92,8 @@ final class SoundCubit extends Cubit<SoundState> {
   }
 
   void fetchSoundList() {
-    final meditationList = SoundLists.soundCategory.soundLists;
-    final sleepList = SoundLists.soundCategory.soundLists;
+    final meditationList = SoundLists.medidation.soundLists;
+    final sleepList = SoundLists.music.soundLists;
     final musicList = SoundLists.yoga.soundLists;
 
     emit(
@@ -109,5 +109,24 @@ final class SoundCubit extends Cubit<SoundState> {
   Future<void> close() {
     _soundService.dispose();
     return super.close();
+  }
+
+  /// Seek to a specific position in the currently playing sound.
+  void seekTo(Duration position) {
+    final seekPosition = position.inSeconds.toDouble();
+
+    _soundService.seekTo(position);
+
+    emit(
+      state.copyWith(
+        timer: position,
+      ),
+    );
+  }
+
+  /// Resume the currently paused sound.
+  void resumeSound() {
+    _soundService.resumeSound();
+    emit(state.copyWith(status: SoundStatus.playing));
   }
 }
