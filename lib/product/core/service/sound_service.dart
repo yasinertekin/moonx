@@ -21,6 +21,9 @@ abstract interface class SoundService {
 
   /// Disposes the resources used by the sound service.
   void dispose();
+
+  /// Seek to a specific position in the currently playing sound.
+  void seekTo(Duration position);
 }
 
 /// A concrete implementation of the [SoundService] interface.
@@ -58,5 +61,10 @@ final class SoundServiceImpl implements SoundService {
   @override
   Stream<Duration> getCurrentDuration() {
     return player.onPositionChanged;
+  }
+
+  @override
+  void seekTo(Duration position) {
+    player.seek(position);
   }
 }
