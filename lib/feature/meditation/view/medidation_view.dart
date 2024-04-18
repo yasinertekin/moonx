@@ -6,6 +6,8 @@ import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
 import 'package:moonx/product/utils/router/app_router.gr.dart';
+import 'package:moonx/product/widget/now_playing/now_playing_bar.dart';
+import 'package:moonx/product/widget/now_playing/now_playing_slide_bar.dart';
 
 part 'widget/medidation_tab_bar.dart';
 part 'widget/medidation_tab_bar_view.dart';
@@ -28,13 +30,12 @@ final class _MedidationScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Stack(
+        fit: StackFit.expand,
         children: [
           _MedidationViewBackgroundImage(),
-          Column(
-            children: [
-              _MedidationTabBarView(),
-            ],
-          ),
+          _MedidationTabBarView(),
+          NowPlayingBar(),
+          NowPlayingSlideBar(),
         ],
       ),
     );
