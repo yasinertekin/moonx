@@ -22,7 +22,7 @@ final class _WeatherText extends StatelessWidget {
             return _CurrentCityTemp(
               temp:
                   // ignore: lines_longer_than_80_chars
-                  '${weather?.current?.condition?.text}, ${state.weather?.current?.tempC} °C',
+                  '${weather?.current?.condition?.text}, ${state.weather?.current?.tempC} C',
             );
           case LocationStatus.loading:
             return const _LoadingText();
