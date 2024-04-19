@@ -1,7 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:gen/gen.dart';
 import 'package:moonx/product/core/enum/month.dart';
 
+/// A mixin that provides a method to find the horoscope based
+///  on the given day and month.
 base mixin HoroscopeMixin {
+  /// Finds the horoscope based on the given day and month.
+  ///
+  /// The [day] parameter represents the day of the month.
+  /// The [month] parameter represents the month of the year.
+  ///
+  /// Returns the corresponding [Horoscope] based on the given day and month.
   Horoscope findHoroscope(int day, Month month) {
     switch (month) {
       case Month.january:
@@ -30,4 +39,7 @@ base mixin HoroscopeMixin {
         return day < 22 ? Horoscope.sagittarius : Horoscope.capricorn;
     }
   }
+
+  // ignore: unused_element
+  void _showCityPicker(BuildContext context) {}
 }
