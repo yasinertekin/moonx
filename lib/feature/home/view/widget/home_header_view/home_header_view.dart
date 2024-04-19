@@ -48,13 +48,18 @@ final class _HomeHeaderPageBuilder extends StatelessWidget {
   }
 }
 
+/// Enum representing the different types of headers in the home view.
 enum HomeHeader {
+  /// Represents the location widget header.
   location(_LocationWidget()),
 
+  /// Represents the calendar widget header.
   calendar(_HomeCalenderWidget());
 
+  /// The widget associated with the header.
   final Widget widget;
 
+  /// Constructs a [HomeHeader] with the given [widget].
   // ignore: sort_constructors_first
   const HomeHeader(this.widget);
 }
