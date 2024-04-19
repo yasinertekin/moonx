@@ -3,7 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
 import 'package:moonx/feature/meditation/cubit/sound_cubit.dart';
 
+/// A widget that displays the slide bar for the now playing sound.
 final class NowPlayingSlideBar extends StatelessWidget {
+  /// Constructs a [NowPlayingSlideBar] object.
   const NowPlayingSlideBar({
     super.key,
   });
@@ -17,10 +19,10 @@ final class NowPlayingSlideBar extends StatelessWidget {
           return Positioned(
             bottom: -22,
             left: -23,
-            right: -15,
+            right: -25,
             child: SliderTheme(
               data: SliderThemeData(
-                trackHeight: 2,
+                trackHeight: 1,
                 thumbShape: SliderComponentShape.noThumb,
               ),
               child: Slider(
@@ -40,11 +42,7 @@ final class NowPlayingSlideBar extends StatelessWidget {
                       .voiceLength
                       .toInt(),
                 ).inSeconds.toDouble(),
-                onChanged: (value) {
-                  // context.read<SoundCubit>().seekTo(
-                  //       Duration(seconds: value.toInt()),
-                  //     );
-                },
+                onChanged: (value) {},
               ),
             ),
           );

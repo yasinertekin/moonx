@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
 import 'package:moonx/feature/meditation/cubit/sound_cubit.dart';
-import 'package:moonx/locator.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
-import 'package:moonx/product/utils/router/app_router.gr.dart';
+import 'package:moonx/product/utils/mixin/show_meditation_detail.dart';
 
-final class NowPlayingBar extends StatelessWidget {
+/// A bar that shows the currently playing meditation.
+final class NowPlayingBar extends StatelessWidget
+    with ShowMeditationDetailMixin {
+  /// Constructs a [NowPlayingBar] object.
   const NowPlayingBar({
     super.key,
   });
@@ -17,13 +19,10 @@ final class NowPlayingBar extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: GestureDetector(
-        onTap: () {
-          Locator.appRouter.push(
-            MedidationDetailRoute(
-              sound: context.read<SoundCubit>().state.sound!,
-            ),
-          );
-        },
+        onTap: () => showMeditationDetail(
+          context,
+          context.read<SoundCubit>().state.sound!,
+        ),
         child: SizedBox(
           height: 55,
           child: BlocBuilder<SoundCubit, SoundState>(
