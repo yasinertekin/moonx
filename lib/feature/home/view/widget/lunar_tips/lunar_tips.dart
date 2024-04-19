@@ -82,7 +82,7 @@ final class _LunarTipsTitleText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Lunar Tips',
+      StringConstants.lunarTips,
       style: context.theme.textTheme.titleLarge?.copyWith(
         color: ColorName.colorColdWind,
         fontSize: 16,
