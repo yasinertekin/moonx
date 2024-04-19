@@ -12,7 +12,4 @@ base mixin _SelectBirthPlaceMixin on State<_SelectBirthPlaceButton> {
     'Mymensingh',
     'İstanbul',
   ];
-
-  /// Show city picker
-  void _showCityPicker(BuildContext context) {}
 }

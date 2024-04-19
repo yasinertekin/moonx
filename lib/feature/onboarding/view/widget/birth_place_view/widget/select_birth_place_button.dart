@@ -10,7 +10,6 @@ final class _SelectBirthPlaceButton extends StatefulWidget {
 
 final class _SelectBirthPlaceButtonState extends State<_SelectBirthPlaceButton>
     with _SelectBirthPlaceMixin, HoroscopeMixin {
-  @override
   void _showCityPicker(BuildContext context) {
     showCupertinoModalPopup<void>(
       context: context,
