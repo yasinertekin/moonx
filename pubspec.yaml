@@ -53,7 +53,6 @@ dependencies:
 
   # Audio
   audioplayers: ^6.0.0
-  just_audio: ^0.9.37
 
   gen:
     path: package/gen
