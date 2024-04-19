@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 
+/// The ILocationService class provides an interface for the location service.
 abstract interface class ILocationService {
   /// Get current location
   Future<Position> getCurrentLocation();
@@ -14,6 +15,9 @@ abstract interface class ILocationService {
 }
 
 @immutable
+
+/// The LocationServiceImpl class provides the implementation
+///  for the location service.
 final class LocationServiceImpl implements ILocationService {
   @override
   Future<Position> getCurrentLocation() async {
