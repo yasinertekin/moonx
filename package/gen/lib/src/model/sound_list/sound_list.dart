@@ -58,8 +58,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: 220.0,
+            audioPath: SoundAssets.adimiKalbineYaz.asset,
+            voiceLength: 312.0,
           ),
         ],
       ),
@@ -75,8 +75,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground1.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: 220.0,
+            audioPath: SoundAssets.birZamanlrFirtinalarEstirirdim.asset,
+            voiceLength: 263.0,
           ),
           Sound(
             title: 'Lorem Ipsum',
@@ -109,8 +109,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.serdarOrtacSeytan.asset,
-            voiceLength: 309,
+            audioPath: SoundAssets.copoeirParnue.asset,
+            voiceLength: 177,
           ),
           Sound(
             title: 'Title',
@@ -121,8 +121,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
-            voiceLength: 220.0,
+            audioPath: SoundAssets.ladiesOfTheWood.asset,
+            voiceLength: 150.0,
           ),
         ],
       ),
@@ -143,8 +143,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.serdarOrtacSeytan.asset,
-            voiceLength: 309,
+            audioPath: SoundAssets.tarkanAradaBir.asset,
+            voiceLength: 259,
           ),
           Sound(
             title: 'Title',
@@ -155,8 +155,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
-            voiceLength: 228,
+            audioPath: SoundAssets.holdingOutForAHero.asset,
+            voiceLength: 284,
           ),
           Sound(
             title: 'Title',
@@ -179,8 +179,8 @@ final class SoundLists {
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
             ),
-            audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
-            voiceLength: 228,
+            audioPath: SoundAssets.englishManInNewYork.asset,
+            voiceLength: 267,
           ),
         ],
       ),
