@@ -6,6 +6,7 @@ import 'package:gen/gen.dart';
 import 'package:intl/intl.dart';
 import 'package:moonx/feature/onboarding/cubit/onboarding_cubit.dart';
 import 'package:moonx/locator.dart';
+import 'package:moonx/product/core/constants/string_constants.dart';
 import 'package:moonx/product/core/enum/month.dart';
 import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
