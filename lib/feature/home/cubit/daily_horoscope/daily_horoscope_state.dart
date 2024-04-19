@@ -1,4 +1,4 @@
-part of 'dialy_horoscope_cubit.dart';
+part of 'daily_horoscope_cubit.dart';
 
 /// Represents the state of the daily horoscope feature.
 final class DailyHoroscopeState extends Equatable {

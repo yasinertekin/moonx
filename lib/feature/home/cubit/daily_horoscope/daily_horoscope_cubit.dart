@@ -36,7 +36,6 @@ final class DailyHoroscopeCubit extends Cubit<DailyHoroscopeState> {
           status: GeminiStatus.failure,
         ),
       );
-      print(e);
     }
   }
 }
