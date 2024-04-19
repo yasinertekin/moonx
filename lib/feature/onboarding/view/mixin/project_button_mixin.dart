@@ -14,7 +14,9 @@ base mixin _ProjectButtonMixin on State<_OnboardingButton> {
         if (birthDate.isEmpty || birthTime.isEmpty) {
           context.showSnackBar(
             const SnackBar(
-              content: Text('Please select birth date and time'),
+              content: Text(
+                StringConstants.pleaseSelectBirthDateAndTime,
+              ),
             ),
           );
           return;
