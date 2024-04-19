@@ -1,5 +1,7 @@
 import 'package:gen/gen.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:moonx/product/core/constants/string_constants.dart';
+import 'package:moonx/product/core/enum/prompts.dart';
 import 'package:moonx/product/core/initialize/config/app_environment.dart';
 
 /// Interface for Gemini service
@@ -23,7 +25,10 @@ final class GeminiServiceImpl implements IGeminiService {
     Users users,
   ) async {
     final prompt = Prompt(
-      'What is my daily horoscope? ${users.horoscope.value}  ',
+      Prompts.dailyHoroscope.getPromptValue(
+        users.horoscope.value,
+        '',
+      ),
     );
     final content = [
       Content.text(
@@ -42,7 +47,12 @@ final class GeminiServiceImpl implements IGeminiService {
 
   @override
   Future<PromptResponse> getLunarTips(LunarTips lunarTips) async {
-    final prompt = Prompt('What are ${lunarTips.title} for today?');
+    final prompt = Prompt(
+      Prompts.lunarTips.getPromptValue(
+        '',
+        lunarTips.title ?? '',
+      ),
+    );
     final content = [
       Content.text(
         prompt.prompt,
@@ -59,7 +69,7 @@ final class GeminiServiceImpl implements IGeminiService {
 
   @override
   GenerativeModel get generativeModel => GenerativeModel(
-        model: 'gemini-pro',
+        model: StringConstants.geminiPro,
         generationConfig: GenerationConfig(),
         apiKey: AppEnvironmentItems.geminiApiKey.value,
       );
