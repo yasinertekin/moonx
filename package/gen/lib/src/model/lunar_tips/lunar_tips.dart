@@ -2,20 +2,10 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:gen/src/asset/index.dart';
 
+/// Represents a Lunar Tip.
 @immutable
-final class LunarTips with EquatableMixin {
-  final String? title;
-
-  final Image? imagePath;
-
-  final Color? backgroundColor;
-
-  final String? description;
-
-  final bool isSelect;
-
-  final Image? bigImage;
-
+class LunarTips with EquatableMixin {
+  /// Constructs a LunarTips instance.
   const LunarTips({
     this.title,
     this.imagePath,
@@ -25,7 +15,25 @@ final class LunarTips with EquatableMixin {
     this.bigImage,
   });
 
-  /// Lunar Tips List
+  /// The title of the Lunar Tip.
+  final String? title;
+
+  /// The image associated with the Lunar Tip.
+  final Image? imagePath;
+
+  /// The background color of the Lunar Tip.
+  final Color? backgroundColor;
+
+  /// The description of the Lunar Tip.
+  final String? description;
+
+  /// Indicates whether the Lunar Tip is selected or not.
+  final bool isSelect;
+
+  /// The big image associated with the Lunar Tip.
+  final Image? bigImage;
+
+  /// Returns a list of LunarTips.
   static List<LunarTips> get lunarTipsList => [
         LunarTips(
           title: 'Business',
@@ -59,7 +67,8 @@ final class LunarTips with EquatableMixin {
         ),
       ];
 
-  /// CopyWith
+  /// Creates a copy of this LunarTips instance with the given
+  /// fields replaced with the new values.
   LunarTips copyWith({
     String? title,
     Image? imagePath,

@@ -1,8 +1,10 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
 
+/// Represents a sound with its properties.
 @immutable
-final class Sound extends Equatable {
+class Sound extends Equatable {
+  /// Creates a new instance of the [Sound] class.
   const Sound({
     required this.title,
     required this.subtitle,
@@ -10,16 +12,25 @@ final class Sound extends Equatable {
     required this.audioPath,
     required this.smallImage,
     required this.voiceLength,
-    this.duration,
   });
 
+  /// The title of the sound.
   final String title;
+
+  /// The subtitle of the sound.
   final String subtitle;
+
+  /// The big image associated with the sound.
   final Image bigImage;
+
+  /// The audio path of the sound.
   final String audioPath;
+
+  /// The small image associated with the sound.
   final Image smallImage;
+
+  /// The length of the sound in seconds.
   final double voiceLength;
-  final Duration? duration;
 
   @override
   List<Object> get props => [
@@ -49,42 +60,6 @@ final class Sound extends Equatable {
       audioPath: audioPath ?? this.audioPath,
       smallImage: smallImageUrl ?? smallImage,
       voiceLength: voiceLength ?? this.voiceLength,
-      duration: duration ?? this.duration,
     );
   }
-}
-
-/// Enum representing voice assets.
-enum SoundAssets {
-  /// Represents the voice asset "mustafa_sandal_aya_benzer".
-  mustafaSandalAyaBenzer('mustafa_sandal_aya_benzer'),
-
-  /// Represents the voice asset "omer_balikci_coffe_blues".
-  omerbalikciCoffeBlues('omer_balikci_coffe_blues'),
-
-  adimiKalbineYaz('adimi_kalbine_yaz'),
-
-  birZamanlrFirtinalarEstirirdim('bir_zamanlar_firtinalar_estirirdim'),
-
-  copoeirParnue('capoeira_paranaue'),
-
-  ladiesOfTheWood('ladies_of_the_wood'),
-
-  holdingOutForAHero('holding_out_for_a_hero'),
-
-  tarkanAradaBir('tarkan_arada_bir'),
-
-  englishManInNewYork('english_man_in_new_york'),
-
-  /// Represents the voice asset "serdar_ortaç_şeytan".
-  serdarOrtacSeytan('serdar_ortaç_seytan');
-
-  final String value;
-
-  /// Constructs a [SoundAssets] with the given [value].
-  // ignore: sort_constructors_first
-  const SoundAssets(this.value);
-
-  /// Returns the asset path for the voice asset.
-  String get asset => '$value.mp3';
 }

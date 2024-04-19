@@ -1,61 +1,15 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/widgets.dart';
+import 'package:gen/src/model/weather/condition.dart';
 import 'package:json_annotation/json_annotation.dart';
-
-import 'condition.dart';
 
 part 'current.g.dart';
 
+/// Represents the current weather conditions.
 @JsonSerializable()
 @immutable
 final class Current with EquatableMixin {
-  @JsonKey(name: 'last_updated_epoch')
-  final double? lastUpdatedEpoch;
-  @JsonKey(name: 'last_updated')
-  final String? lastUpdated;
-  @JsonKey(name: 'temp_c')
-  final double? tempC;
-  @JsonKey(name: 'temp_f')
-  final double? tempF;
-  @JsonKey(name: 'is_day')
-  final double? isDay;
-  @JsonKey(name: 'condition')
-  final Condition? condition;
-  @JsonKey(name: 'wind_mph')
-  final double? windMph;
-  @JsonKey(name: 'wind_kph')
-  final double? windKph;
-  @JsonKey(name: 'wind_degree')
-  final double? windDegree;
-  @JsonKey(name: 'wind_dir')
-  final String? windDir;
-  @JsonKey(name: 'pressure_mb')
-  final double? pressureMb;
-  @JsonKey(name: 'pressure_in')
-  final double? pressureIn;
-  @JsonKey(name: 'precip_mm')
-  final double? precipMm;
-  @JsonKey(name: 'precip_in')
-  final double? precipIn;
-  @JsonKey(name: 'humidity')
-  final double? humidity;
-  @JsonKey(name: 'cloud')
-  final double? cloud;
-  @JsonKey(name: 'feelslike_c')
-  final double? feelslikeC;
-  @JsonKey(name: 'feelslike_f')
-  final double? feelslikeF;
-  @JsonKey(name: 'vis_km')
-  final double? visKm;
-  @JsonKey(name: 'vis_miles')
-  final double? visMiles;
-  @JsonKey(name: 'uv')
-  final double? uv;
-  @JsonKey(name: 'gust_mph')
-  final double? gustMph;
-  @JsonKey(name: 'gust_kph')
-  final double? gustKph;
-
+  /// Creates a new instance of [Current].
   Current({
     this.lastUpdatedEpoch,
     this.lastUpdated,
@@ -82,9 +36,103 @@ final class Current with EquatableMixin {
     this.gustKph,
   });
 
+  /// Creates a new instance of [Current] from a JSON map.
   factory Current.fromJson(Map<String, dynamic> json) =>
       _$CurrentFromJson(json);
 
+  /// The epoch time when the weather was last updated.
+  @JsonKey(name: 'last_updated_epoch')
+  final double? lastUpdatedEpoch;
+
+  /// The time when the weather was last updated.
+  @JsonKey(name: 'last_updated')
+  final String? lastUpdated;
+
+  /// The temperature in Celsius.
+  @JsonKey(name: 'temp_c')
+  final double? tempC;
+
+  /// The temperature in Fahrenheit.
+  @JsonKey(name: 'temp_f')
+  final double? tempF;
+
+  /// Indicates whether it is day or night.
+  @JsonKey(name: 'is_day')
+  final double? isDay;
+
+  /// The condition of the weather.
+  @JsonKey(name: 'condition')
+  final Condition? condition;
+
+  /// The wind speed in miles per hour.
+  @JsonKey(name: 'wind_mph')
+  final double? windMph;
+
+  /// The wind speed in kilometers per hour.
+  @JsonKey(name: 'wind_kph')
+  final double? windKph;
+
+  /// The wind direction in degrees.
+  @JsonKey(name: 'wind_degree')
+  final double? windDegree;
+
+  /// The wind direction.
+  @JsonKey(name: 'wind_dir')
+  final String? windDir;
+
+  /// The pressure in millibars.
+  @JsonKey(name: 'pressure_mb')
+  final double? pressureMb;
+
+  /// The pressure in inches.
+  @JsonKey(name: 'pressure_in')
+  final double? pressureIn;
+
+  /// The precipitation in millimeters.
+  @JsonKey(name: 'precip_mm')
+  final double? precipMm;
+
+  /// The precipitation in inches.
+  @JsonKey(name: 'precip_in')
+  final double? precipIn;
+
+  /// The humidity percentage.
+  @JsonKey(name: 'humidity')
+  final double? humidity;
+
+  /// The cloud coverage percentage.
+  @JsonKey(name: 'cloud')
+  final double? cloud;
+
+  /// The "feels like" temperature in Celsius.
+  @JsonKey(name: 'feelslike_c')
+  final double? feelslikeC;
+
+  /// The "feels like" temperature in Fahrenheit.
+  @JsonKey(name: 'feelslike_f')
+  final double? feelslikeF;
+
+  /// The visibility in kilometers.
+  @JsonKey(name: 'vis_km')
+  final double? visKm;
+
+  /// The visibility in miles.
+  @JsonKey(name: 'vis_miles')
+  final double? visMiles;
+
+  /// The UV index.
+  @JsonKey(name: 'uv')
+  final double? uv;
+
+  /// The wind gust speed in miles per hour.
+  @JsonKey(name: 'gust_mph')
+  final double? gustMph;
+
+  /// The wind gust speed in kilometers per hour.
+  @JsonKey(name: 'gust_kph')
+  final double? gustKph;
+
+  /// Converts this [Current] instance to a JSON map.
   Map<String, dynamic> toJson() => _$CurrentToJson(this);
 
   @override
@@ -111,58 +159,6 @@ final class Current with EquatableMixin {
         visMiles,
         uv,
         gustMph,
-        gustKph
+        gustKph,
       ];
-
-  Current copyWith({
-    double? lastUpdatedEpoch,
-    String? lastUpdated,
-    double? tempC,
-    double? tempF,
-    double? isDay,
-    Condition? condition,
-    double? windMph,
-    double? windKph,
-    double? windDegree,
-    String? windDir,
-    double? pressureMb,
-    double? pressureIn,
-    double? precipMm,
-    double? precipIn,
-    double? humidity,
-    double? cloud,
-    double? feelslikeC,
-    double? feelslikeF,
-    double? visKm,
-    double? visMiles,
-    double? uv,
-    double? gustMph,
-    double? gustKph,
-  }) {
-    return Current(
-      lastUpdatedEpoch: lastUpdatedEpoch ?? this.lastUpdatedEpoch,
-      lastUpdated: lastUpdated ?? this.lastUpdated,
-      tempC: tempC ?? this.tempC,
-      tempF: tempF ?? this.tempF,
-      isDay: isDay ?? this.isDay,
-      condition: condition ?? this.condition,
-      windMph: windMph ?? this.windMph,
-      windKph: windKph ?? this.windKph,
-      windDegree: windDegree ?? this.windDegree,
-      windDir: windDir ?? this.windDir,
-      pressureMb: pressureMb ?? this.pressureMb,
-      pressureIn: pressureIn ?? this.pressureIn,
-      precipMm: precipMm ?? this.precipMm,
-      precipIn: precipIn ?? this.precipIn,
-      humidity: humidity ?? this.humidity,
-      cloud: cloud ?? this.cloud,
-      feelslikeC: feelslikeC ?? this.feelslikeC,
-      feelslikeF: feelslikeF ?? this.feelslikeF,
-      visKm: visKm ?? this.visKm,
-      visMiles: visMiles ?? this.visMiles,
-      uv: uv ?? this.uv,
-      gustMph: gustMph ?? this.gustMph,
-      gustKph: gustKph ?? this.gustKph,
-    );
-  }
 }

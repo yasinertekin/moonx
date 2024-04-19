@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:gen/gen.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'users.g.dart';
@@ -45,6 +46,7 @@ final class Users extends Equatable {
   /// Users Place of birth
   final String placeOfBirth;
 
+  /// Users Horoscope
   final Horoscope horoscope;
 
   @override
@@ -78,23 +80,4 @@ final class Users extends Equatable {
       horoscope: horoscope ?? this.horoscope,
     );
   }
-}
-
-enum Horoscope {
-  aries('Aries'),
-  taurus('Taurus'),
-  gemini('Gemini'),
-  cancer('Cancer'),
-  leo('Leo'),
-  virgo('Virgo'),
-  libra('Libra'),
-  scorpio('Scorpio'),
-  sagittarius('Sagittarius'),
-  capricorn('Capricorn'),
-  aquarius('Aquarius'),
-  pisces('Pisces');
-
-  const Horoscope(this.value);
-
-  final String value;
 }
