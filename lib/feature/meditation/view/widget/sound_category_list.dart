@@ -1,18 +1,18 @@
-part of 'medidations_custom_view.dart';
+part of 'meditations_custom_view.dart';
 
 final class _SoundCategoryList extends StatelessWidget {
   const _SoundCategoryList({
     required this.widget,
   });
 
-  final MedidationsCustomView widget;
+  final MeditationsCustomView widget;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<SoundCubit, SoundState, List<SoundList>>(
       selector: (state) {
-        if (widget.soundLists == SoundLists.medidation) {
-          return state.medidationlist;
+        if (widget.soundLists == SoundLists.meditation) {
+          return state.meditationList;
         } else if (widget.soundLists == SoundLists.yoga) {
           return state.sleepList;
         } else {

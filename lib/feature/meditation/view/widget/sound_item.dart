@@ -1,6 +1,6 @@
-part of '../widget/medidations_custom_view.dart';
+part of 'meditations_custom_view.dart';
 
-final class _SoundItem extends StatelessWidget {
+final class _SoundItem extends StatelessWidget with ShowMeditationDetailMixin {
   const _SoundItem({
     required this.sound,
     required this.index,
@@ -15,11 +15,7 @@ final class _SoundItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
-        await Locator.appRouter.push(
-          MedidationDetailRoute(
-            sound: sound,
-          ),
-        );
+        showMeditationDetail(context, sound);
       },
       child: Stack(
         children: [

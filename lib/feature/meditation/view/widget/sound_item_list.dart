@@ -1,4 +1,4 @@
-part of 'medidations_custom_view.dart';
+part of 'meditations_custom_view.dart';
 
 final class _SoundItemList extends StatelessWidget {
   const _SoundItemList({
@@ -13,8 +13,8 @@ final class _SoundItemList extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocSelector<SoundCubit, SoundState, List<Sound>>(
       selector: (state) {
-        if (soundLists == SoundLists.medidation) {
-          return state.medidationlist[index].sound;
+        if (soundLists == SoundLists.meditation) {
+          return state.meditationList[index].sound;
         } else if (soundLists == SoundLists.yoga) {
           return state.sleepList[index].sound;
         } else {

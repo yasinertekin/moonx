@@ -1,4 +1,4 @@
-part of 'medidations_custom_view.dart';
+part of 'meditations_custom_view.dart';
 
 final class _SoundListCategoryTitle extends StatelessWidget {
   const _SoundListCategoryTitle({
