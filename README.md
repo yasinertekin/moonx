@@ -1,18 +1,16 @@
 # Moonx
 
-Text Alchemy App is a mobile application developed with Flutter. This application uses Google ML Kit to identify text in images taken from the gallery or camera. Users can capture images or select images from their device's gallery, and the application then identifies the text in the image and presents it to the user. Recognised text can optionally be stored on the device using the Hive package.
+Moonx App is a mobile application developed with Flutter. This application provides daily horoscope, lunar tips, weather forecast, and meditation music for users. The application uses the Horoscope API, Lunar API, Weather API, and Audio Player package to fetch the data and play the music.
 
 ## Features
 
-- Text Recognition: This application uses Google ML Kit to identify text in images captured from the gallery or camera.
-- Image capture: Users can capture images directly from the app using the device's camera.
-- Image selection: Users can select images from their device's gallery to perform text recognition.
-- Text Presentation: The application identifies the text within the selected image and presents it to the user for easy viewing.
-- PDF output: Users can generate PDF output of the recognised text, providing a convenient way to store and share text information.
-- Image cropping: Users have the option to crop the selected image prior to text recognition, allowing for greater accuracy and customisation.
-- Text storage: Recognised text can optionally be stored on the device using the Hive package, allowing users to store and access recognised text for future use.
-- Simple interface: The application features a user-friendly interface, making it easy for users to perform text recognition tasks efficiently.
-- Impressive performance: Using Flutter and Google ML Kit, the application delivers impressive performance, ensuring a smooth and seamless text recognition experience.
+- Daily Horoscope:The application uses the Horoscope API to fetch the daily horoscope for each zodiac sign.
+
+- Daily Lunar Tips: The application uses the Lunar API to fetch daily lunar tips.
+
+- Daily Weather: The application uses the Weather API to fetch the daily weather forecast for the user's location.
+
+- Media Player: The application uses the Audio Player package to play meditation music.
 
 ## Built With
 
@@ -20,8 +18,6 @@ Text Alchemy App is a mobile application developed with Flutter. This applicatio
 - [Dart](https://dart.dev/)
 
 ## Preview
-
-
 ## Onboarding
 <p>
     <img src="screenshots/onboarding1.png" width="25%" />
@@ -64,11 +60,24 @@ Text Alchemy App is a mobile application developed with Flutter. This applicatio
   - [Provider](https://pub.dev/packages/provider)
 
 - Caching
-  - [Hive](https://pub.dev/packages/hive)
   - [HydratedBloc](https://pub.dev/packages/hydrated_bloc)
 - Routing
   - [AutoRoute](https://pub.dev/packages/auto_route)
 - Dependency Injection
   - [GetIt](https://pub.dev/packages/get_it)
-- Google MlKit Text Recognition
-  - [GoogleMlKitTextRecognition](https://pub.dev/packages/google_mlkit_text_recognition)
+- Utils
+  - [Kartal](https://pub.dev/packages/kartal)
+- Network
+  - [Dio](https://pub.dev/packages/dio)   
+- Environment
+  - [Envied](https://pub.dev/packages/envied)
+- Audio
+  - [audioplayers](https://pub.dev/packages/audioplayers)
+- Generate Assets
+  - [FlutterGen](https://pub.dev/packages/flutter_gen)
+- Lint
+  - [very_good_analysis](https://pub.dev/packages/very_good_analysis)
+- Ai Models
+  - [google_generative_ai](https://pub.dev/packages/google_generative_ai)
+
+
