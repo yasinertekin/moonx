@@ -177,7 +177,11 @@ final class _SoundOperation extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.read<SoundCubit>().seekTo(
+                    Duration(seconds: state.timer.inSeconds - 10),
+                  );
+            },
             child: Assets.images.btnBackPlaylist.image(
               package: 'gen',
             ),
@@ -200,8 +204,15 @@ final class _SoundOperation extends StatelessWidget {
                     package: 'gen',
                   ),
           ),
-          Assets.images.btnNextPlaylist.image(
-            package: 'gen',
+          GestureDetector(
+            onTap: () {
+              context.read<SoundCubit>().seekTo(
+                    Duration(seconds: state.timer.inSeconds + 10),
+                  );
+            },
+            child: Assets.images.btnNextPlaylist.image(
+              package: 'gen',
+            ),
           ),
           Assets.images.imgFav.image(
             package: 'gen',
