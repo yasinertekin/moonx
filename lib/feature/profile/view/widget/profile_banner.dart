@@ -29,7 +29,7 @@ final class _BannerDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Unlock package in order to access the features',
+      StringConstants.bannerDescription,
       style: context.theme.textTheme.bodyLarge?.copyWith(
         fontSize: 14,
         color: Colors.white,
@@ -57,7 +57,7 @@ final class _BannerHeader extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  'Get Premium',
+                  StringConstants.getPremium,
                   style: context.theme.textTheme.titleLarge?.copyWith(
                     fontSize: 20,
                     color: Colors.white,
@@ -73,7 +73,7 @@ final class _BannerHeader extends StatelessWidget {
               ],
             ),
             Text(
-              'to Access All Contents!',
+              StringConstants.toAccessAllContents,
               style: context.theme.textTheme.bodyLarge?.copyWith(
                 fontSize: 20,
                 color: Colors.white,

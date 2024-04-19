@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:gen/gen.dart';
+import 'package:moonx/product/core/constants/string_constants.dart';
 import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
@@ -13,7 +14,10 @@ part 'widget/profile_banner.dart';
 part 'widget/profile_settings_list.dart';
 
 @RoutePage()
+
+/// The view for the profile screen.
 final class ProfileView extends StatelessWidget {
+  /// Constructs a [ProfileView] object.
   const ProfileView({super.key});
 
   @override

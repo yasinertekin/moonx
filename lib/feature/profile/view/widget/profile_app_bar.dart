@@ -34,7 +34,7 @@ final class _AppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Settings',
+      StringConstants.settingsTitle,
       style: context.theme.textTheme.titleLarge?.copyWith(
         color: ColorName.colorEmptiness,
         fontWeight: FontWeight.bold,
