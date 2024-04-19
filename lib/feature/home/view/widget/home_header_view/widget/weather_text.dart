@@ -10,7 +10,7 @@ final class _WeatherText extends StatelessWidget {
         final weather = state.weather;
         switch (state.status) {
           case LocationStatus.initial:
-            return const Text('');
+            return const SizedBox.shrink();
           case LocationStatus.permissionDenied:
             return const _PermissionDeniedText();
           case LocationStatus.locationError:

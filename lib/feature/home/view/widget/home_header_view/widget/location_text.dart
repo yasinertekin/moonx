@@ -11,7 +11,7 @@ final class _LocationText extends StatelessWidget {
         builder: (context, state) {
           switch (state.status) {
             case LocationStatus.initial:
-              return const Text('');
+              return const SizedBox.shrink();
             case LocationStatus.permissionDenied:
               return const _PermissionDeniedText();
             case LocationStatus.locationError:
@@ -47,7 +47,7 @@ final class _LocationError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Location Error',
+      StringConstants.locationError,
       style: context.theme.textTheme.bodyLarge?.copyWith(
         fontSize: 12,
       ),
