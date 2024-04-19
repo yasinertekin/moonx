@@ -2,7 +2,10 @@ import 'package:flutter/widgets.dart';
 import 'package:gen/gen.dart';
 
 @immutable
+
+/// AppConfiguration
 final class AppEnvironment {
+  /// Constructor
   AppEnvironment.general() {
     _instance = Env();
   }
