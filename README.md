@@ -24,9 +24,9 @@ Text Alchemy App is a mobile application developed with Flutter. This applicatio
 
 ## Onboarding
 <p>
-    <img src="screenshots/onboarding1.png" width="19%"/>
-    <img src="screenshots/onboarding2.png" width="19%"/>
-    <img src="screenshots/onboarding3.png" width="19%"/>
+    <img src="screenshots/onboarding1.png" width="33%"/>
+    <img src="screenshots/onboarding2.png" width="33%"/>
+    <img src="screenshots/onboarding3.png" width="33%"/>
 </p>
 
 ## Home
