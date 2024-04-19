@@ -4,26 +4,11 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'weather_location.g.dart';
 
+/// Represents the location information for weather.
 @JsonSerializable()
 @immutable
 final class WeatherLocation with EquatableMixin {
-  @JsonKey(name: 'name')
-  final String? name;
-  @JsonKey(name: 'region')
-  final String? region;
-  @JsonKey(name: 'country')
-  final String? country;
-  @JsonKey(name: 'lat')
-  final double? lat;
-  @JsonKey(name: 'lon')
-  final double? lon;
-  @JsonKey(name: 'tz_id')
-  final String? tzId;
-  @JsonKey(name: 'localtime_epoch')
-  final double? localtimeEpoch;
-  @JsonKey(name: 'localtime')
-  final String? localtime;
-
+  /// Creates a new instance of [WeatherLocation].
   WeatherLocation({
     this.name,
     this.region,
@@ -35,34 +20,46 @@ final class WeatherLocation with EquatableMixin {
     this.localtime,
   });
 
+  /// Creates a new instance of [WeatherLocation] from a JSON map.
   factory WeatherLocation.fromJson(Map<String, dynamic> json) =>
       _$WeatherLocationFromJson(json);
 
+  /// The name of the location.
+  @JsonKey(name: 'name')
+  final String? name;
+
+  /// The region of the location.
+  @JsonKey(name: 'region')
+  final String? region;
+
+  /// The country of the location.
+  @JsonKey(name: 'country')
+  final String? country;
+
+  /// The latitude coordinate of the location.
+  @JsonKey(name: 'lat')
+  final double? lat;
+
+  /// The longitude coordinate of the location.
+  @JsonKey(name: 'lon')
+  final double? lon;
+
+  /// The timezone ID of the location.
+  @JsonKey(name: 'tz_id')
+  final String? tzId;
+
+  /// The epoch time of the local time.
+  @JsonKey(name: 'localtime_epoch')
+  final double? localtimeEpoch;
+
+  /// The local time of the location.
+  @JsonKey(name: 'localtime')
+  final String? localtime;
+
+  /// Converts the [WeatherLocation] instance to a JSON map.
   Map<String, dynamic> toJson() => _$WeatherLocationToJson(this);
 
   @override
   List<Object?> get props =>
       [name, region, country, lat, lon, tzId, localtimeEpoch, localtime];
-
-  WeatherLocation copyWith({
-    String? name,
-    String? region,
-    String? country,
-    double? lat,
-    double? lon,
-    String? tzId,
-    double? localtimeEpoch,
-    String? localtime,
-  }) {
-    return WeatherLocation(
-      name: name ?? this.name,
-      region: region ?? this.region,
-      country: country ?? this.country,
-      lat: lat ?? this.lat,
-      lon: lon ?? this.lon,
-      tzId: tzId ?? this.tzId,
-      localtimeEpoch: localtimeEpoch ?? this.localtimeEpoch,
-      localtime: localtime ?? this.localtime,
-    );
-  }
 }
