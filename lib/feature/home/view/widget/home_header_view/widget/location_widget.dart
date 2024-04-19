@@ -19,7 +19,9 @@ final class _LocationWidget extends StatelessWidget {
         const _DateTimeText(),
         const EmptySizedBox(),
         const _WeatherText(),
-        const EmptySizedBox(),
+        EmptySizedBox(
+          height: context.dynamicHeight(0.03),
+        ),
         const _HourlyForecastList(),
       ],
     );
