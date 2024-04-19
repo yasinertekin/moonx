@@ -8,9 +8,7 @@ part 'lunar_tips_state.dart';
 
 /// Cubit responsible for managing the state of lunar tips.
 final class LunarTipsCubit extends Cubit<LunarTipsState> {
-  /// Constructor for [LunarTipsCubit].
-  ///
-  /// [geminiService] - The service to get the lunar tips.
+  /// Constructor for the lunar tips cubit.
   LunarTipsCubit(this._geminiService)
       : super(
           LunarTipsState(
