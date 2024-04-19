@@ -3,49 +3,25 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
 import 'package:moonx/product/core/service/sound_service.dart';
 
-enum SoundStatus { playing, paused, stopped, initial }
+part 'sound_state.dart';
 
-final class SoundState extends Equatable {
-  const SoundState({
-    required this.status,
-    required this.timer,
-    this.sound,
-    this.medidationlist = const [],
-    this.sleepList = const [],
-    this.musicList = const [],
-  });
-
-  final SoundStatus status;
-  final Sound? sound;
-  final Duration timer;
-  final List<SoundList> medidationlist; // Adjusted types here
-  final List<SoundList> sleepList; // Adjusted types here
-  final List<SoundList> musicList; // Adjusted types here
-
-  @override
-  List<Object> get props =>
-      [status, timer, medidationlist, sleepList, musicList];
-
-  SoundState copyWith({
-    SoundStatus? status,
-    Sound? sound,
-    Duration? timer,
-    List<SoundList>? medidationlist,
-    List<SoundList>? sleepList,
-    List<SoundList>? musicList,
-  }) {
-    return SoundState(
-      status: status ?? this.status,
-      sound: sound ?? this.sound,
-      timer: timer ?? this.timer,
-      medidationlist: medidationlist ?? this.medidationlist,
-      sleepList: sleepList ?? this.sleepList,
-      musicList: musicList ?? this.musicList,
-    );
-  }
-}
-
+/// Cubit responsible for managing the sound state in the meditation feature.
+///
+/// This cubit is used to control the playback of sounds
+/// in the meditation feature.
+/// It provides methods to play, pause, stop, and seek sounds,
+/// as well as update the timer.
+/// It also fetches the list of available sounds for meditation,
+///  sleep, and music.
+/// When the cubit is closed, it disposes of the sound service.
 final class SoundCubit extends Cubit<SoundState> {
+  /// Constructs a [SoundCubit] object.
+  ///
+  /// The [soundService] parameter is required and
+  /// is used to interact with the sound playback functionality.
+  /// The initial state of the cubit is set to have an
+  ///  initial sound status of "initial" and a timer of zero duration.
+  /// The [fetchSoundList] method is called to populate the sound lists.
   SoundCubit({
     required SoundService soundService,
   })  : _soundService = soundService,
@@ -60,6 +36,11 @@ final class SoundCubit extends Cubit<SoundState> {
 
   final SoundService _soundService;
 
+  /// Plays the specified sound.
+  ///
+  /// The [sound] parameter specifies the sound to be played.
+  /// The state is updated to reflect the playing status and the
+  ///  currently playing sound.
   void playSound(Sound sound) {
     _soundService.playSound(sound.audioPath);
     emit(
@@ -71,16 +52,19 @@ final class SoundCubit extends Cubit<SoundState> {
     );
   }
 
+  /// Pauses the currently playing sound.
   void pauseSound() {
     _soundService.pauseSound();
     emit(state.copyWith(status: SoundStatus.paused));
   }
 
+  /// Stops the currently playing sound.
   void stopSound() {
     _soundService.stopSound();
     emit(state.copyWith(status: SoundStatus.stopped));
   }
 
+  /// Updates the timer to reflect the current position of the sound.
   Future<void> updateTimer() async {
     await for (final duration in _soundService.getCurrentDuration()) {
       emit(
@@ -91,14 +75,15 @@ final class SoundCubit extends Cubit<SoundState> {
     }
   }
 
+  /// Fetches the list of available sounds for meditation, sleep, and music.
   void fetchSoundList() {
-    final meditationList = SoundLists.medidation.soundLists;
+    final meditationList = SoundLists.meditation.soundLists;
     final sleepList = SoundLists.music.soundLists;
     final musicList = SoundLists.yoga.soundLists;
 
     emit(
       state.copyWith(
-        medidationlist: meditationList,
+        meditationList: meditationList,
         sleepList: sleepList,
         musicList: musicList,
       ),
@@ -113,8 +98,6 @@ final class SoundCubit extends Cubit<SoundState> {
 
   /// Seek to a specific position in the currently playing sound.
   void seekTo(Duration position) {
-    final seekPosition = position.inSeconds.toDouble();
-
     _soundService.seekTo(position);
 
     emit(
