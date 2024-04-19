@@ -19,8 +19,14 @@ class ColorName {
   /// Color: #E2E3E3
   static const Color colorColdWind = Color(0xFFE2E3E3);
 
+  /// Color: #141833
+  static const Color colorDarkNight = Color(0xFF141833);
+
   /// Color: #080a16
   static const Color colorDarkRift = Color(0xFF080A16);
+
+  /// Color: #2c36a4
+  static const Color colorDepthsOfNight = Color(0xFF2C36A4);
 
   /// Color: #ABABAB
   static const Color colorDhusarGrey = Color(0xFFABABAB);
@@ -48,6 +54,9 @@ class ColorName {
 
   /// Color: #ebebeb
   static const Color colorMercury = Color(0xFFEBEBEB);
+
+  /// Color: #040406
+  static const Color colorRavensCoat = Color(0xFF040406);
 
   /// Color: #191919
   static const Color colorThamarBlack = Color(0xFF191919);

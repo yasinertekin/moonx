@@ -188,6 +188,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgFood2 =>
       const AssetGenImage('assets/images/img_food2.png');
 
+  /// File path: assets/images/img_help.png
+  AssetGenImage get imgHelp =>
+      const AssetGenImage('assets/images/img_help.png');
+
   /// File path: assets/images/img_home_background.png
   AssetGenImage get imgHomeBackground =>
       const AssetGenImage('assets/images/img_home_background.png');
@@ -228,6 +232,22 @@ class $AssetsImagesGen {
   AssetGenImage get imgMusic4 =>
       const AssetGenImage('assets/images/img_music4.png');
 
+  /// File path: assets/images/img_premium_banner.png
+  AssetGenImage get imgPremiumBanner =>
+      const AssetGenImage('assets/images/img_premium_banner.png');
+
+  /// File path: assets/images/img_premium_icon.png
+  AssetGenImage get imgPremiumIcon =>
+      const AssetGenImage('assets/images/img_premium_icon.png');
+
+  /// File path: assets/images/img_privacy.png
+  AssetGenImage get imgPrivacy =>
+      const AssetGenImage('assets/images/img_privacy.png');
+
+  /// File path: assets/images/img_rate.png
+  AssetGenImage get imgRate =>
+      const AssetGenImage('assets/images/img_rate.png');
+
   /// File path: assets/images/img_relations.png
   AssetGenImage get imgRelations =>
       const AssetGenImage('assets/images/img_relations.png');
@@ -235,6 +255,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_relations2.png
   AssetGenImage get imgRelations2 =>
       const AssetGenImage('assets/images/img_relations2.png');
+
+  /// File path: assets/images/img_restore.png
+  AssetGenImage get imgRestore =>
+      const AssetGenImage('assets/images/img_restore.png');
+
+  /// File path: assets/images/img_right_btn.png
+  AssetGenImage get imgRightBtn =>
+      const AssetGenImage('assets/images/img_right_btn.png');
 
   /// File path: assets/images/img_small_moon_down.png
   AssetGenImage get imgSmallMoonDown =>
@@ -251,6 +279,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_small_sun_up.png
   AssetGenImage get imgSmallSunUp =>
       const AssetGenImage('assets/images/img_small_sun_up.png');
+
+  /// File path: assets/images/img_terms.png
+  AssetGenImage get imgTerms =>
+      const AssetGenImage('assets/images/img_terms.png');
 
   /// File path: assets/images/img_welcome.png
   AssetGenImage get imgWelcome =>
@@ -277,6 +309,7 @@ class $AssetsImagesGen {
         imgFav,
         imgFood,
         imgFood2,
+        imgHelp,
         imgHomeBackground,
         imgHomeBanner,
         imgMedidationBackground,
@@ -287,12 +320,19 @@ class $AssetsImagesGen {
         imgMusic2,
         imgMusic3,
         imgMusic4,
+        imgPremiumBanner,
+        imgPremiumIcon,
+        imgPrivacy,
+        imgRate,
         imgRelations,
         imgRelations2,
+        imgRestore,
+        imgRightBtn,
         imgSmallMoonDown,
         imgSmallMoonUp,
         imgSmallSunDown,
         imgSmallSunUp,
+        imgTerms,
         imgWelcome
       ];
 }
