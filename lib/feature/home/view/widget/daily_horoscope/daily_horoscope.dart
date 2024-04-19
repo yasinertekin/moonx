@@ -7,15 +7,8 @@ final class _DailyHoroscope extends StatefulWidget {
   State<_DailyHoroscope> createState() => _DailyHoroscopeState();
 }
 
-final class _DailyHoroscopeState extends State<_DailyHoroscope> {
-  @override
-  void initState() {
-    super.initState();
-    context.read<DailyHoroscopeCubit>().generateDailyHoroscope(
-          users: context.read<UsersBloc>().state.users,
-        );
-  }
-
+final class _DailyHoroscopeState extends State<_DailyHoroscope>
+    with _DailyHoroscopeMixin {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<DailyHoroscopeCubit, DailyHoroscopeState>(
