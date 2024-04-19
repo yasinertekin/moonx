@@ -1,4 +1,4 @@
-part of '../widget/medidations_custom_view.dart';
+part of 'meditations_custom_view.dart';
 
 final class _PlayButton extends StatefulWidget {
   const _PlayButton({
@@ -13,16 +13,9 @@ final class _PlayButton extends StatefulWidget {
   State<_PlayButton> createState() => _PlayButtonState();
 }
 
-final class _PlayButtonState extends State<_PlayButton> {
-  @override
-  void dispose() {
-    super.dispose();
-    context.read<SoundCubit>().close();
-  }
-
+final class _PlayButtonState extends State<_PlayButton> with _PlayButtonMixin {
   @override
   Widget build(BuildContext context) {
-    final bloc = BlocProvider.of<SoundCubit>(context);
     return BlocBuilder<SoundCubit, SoundState>(
       builder: (context, state) {
         return Padding(
