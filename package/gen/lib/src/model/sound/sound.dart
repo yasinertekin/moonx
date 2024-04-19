@@ -62,6 +62,20 @@ enum SoundAssets {
   /// Represents the voice asset "omer_balikci_coffe_blues".
   omerbalikciCoffeBlues('omer_balikci_coffe_blues'),
 
+  adimiKalbineYaz('adimi_kalbine_yaz'),
+
+  birZamanlrFirtinalarEstirirdim('bir_zamanlar_firtinalar_estirirdim'),
+
+  copoeirParnue('capoeira_paranaue'),
+
+  ladiesOfTheWood('ladies_of_the_wood'),
+
+  holdingOutForAHero('holding_out_for_a_hero'),
+
+  tarkanAradaBir('tarkan_arada_bir'),
+
+  englishManInNewYork('english_man_in_new_york'),
+
   /// Represents the voice asset "serdar_ortaç_şeytan".
   serdarOrtacSeytan('serdar_ortaç_seytan');
 
