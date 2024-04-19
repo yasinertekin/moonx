@@ -1,7 +1,6 @@
 # Moonx
 
-Moonx App is a mobile application developed with Flutter. This application provides daily horoscope, lunar tips, weather forecast, and meditation music for users. The application uses the Horoscope API, Lunar API, Weather API, and Audio Player package to fetch the data and play the music.
-
+Moonx App is a mobile application developed with Flutter. This application provides daily horoscope, lunar tips, weather forecast, and meditation music for users.
 ## Features
 
 - Daily Horoscope:The application uses the Horoscope API to fetch the daily horoscope for each zodiac sign.
