@@ -4,7 +4,26 @@ import 'package:moonx/product/core/constants/string_constants.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
 
+/// A custom button widget for projects.
 final class ProjectButton extends StatelessWidget {
+  /// Creates a [ProjectButton].
+  ///
+  /// The [onPressed] parameter is required and specifies the callback function
+  /// to be called when the button is pressed.
+  ///
+  /// The [backgroundColor] parameter specifies
+  /// the background color of the button.
+  ///
+  /// The [height] parameter specifies the height of the button.
+  ///
+  /// The [width] parameter specifies the width of the button.
+  ///
+  /// The [title] parameter specifies the title text of the button.
+  ///
+  /// The [titleColor] parameter specifies the color of the title text.
+  ///
+  /// The [borderRadiusGeometry] parameter specifies the border radius of
+  /// the button.
   const ProjectButton({
     required this.onPressed,
     super.key,
@@ -12,22 +31,29 @@ final class ProjectButton extends StatelessWidget {
     this.height,
     this.width,
     this.title,
-    this.borderRadiusGeometry,
     this.titleColor,
+    this.borderRadiusGeometry,
   });
 
+  /// The background color of the button.
   final Color? backgroundColor;
 
+  /// The height of the button.
   final double? height;
 
+  /// The width of the button.
   final double? width;
 
+  /// The callback function to be called when the button is pressed.
   final VoidCallback onPressed;
 
+  /// The title text of the button.
   final String? title;
 
+  /// The color of the title text.
   final Color? titleColor;
 
+  /// The border radius of the button.
   final BorderRadiusGeometry? borderRadiusGeometry;
 
   @override
