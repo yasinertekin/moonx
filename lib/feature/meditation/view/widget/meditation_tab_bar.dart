@@ -1,7 +1,7 @@
-part of '../medidation_view.dart';
+part of '../meditation_view.dart';
 
-final class _MedidationTabbar extends StatelessWidget {
-  const _MedidationTabbar({
+final class _MeditationTabBar extends StatelessWidget {
+  const _MeditationTabBar({
     required this.tabsRouter,
   });
 
@@ -36,9 +36,9 @@ final class _TabBarList extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: List.generate(
-          MedidationTabs.values.length,
+          MeditationTabs.values.length,
           (index) {
-            final tab = MedidationTabs.values[index];
+            final tab = MeditationTabs.values[index];
             return _TabBarView(
               tabsRouter: tabsRouter,
               tab: tab,
@@ -59,7 +59,7 @@ final class _TabBarView extends StatelessWidget {
   });
 
   final TabsRouter tabsRouter;
-  final MedidationTabs tab;
+  final MeditationTabs tab;
   final int index;
 
   @override
@@ -88,7 +88,7 @@ final class _TabTitle extends StatelessWidget {
     required this.tab,
   });
 
-  final MedidationTabs tab;
+  final MeditationTabs tab;
 
   @override
   Widget build(BuildContext context) {

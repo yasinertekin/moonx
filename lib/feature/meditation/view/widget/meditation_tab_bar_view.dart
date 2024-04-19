@@ -1,24 +1,24 @@
-part of '../medidation_view.dart';
+part of '../meditation_view.dart';
 
-final class _MedidationTabBarView extends StatefulWidget {
-  const _MedidationTabBarView();
+final class _MeditationTabBarView extends StatefulWidget {
+  const _MeditationTabBarView();
 
   @override
-  State<_MedidationTabBarView> createState() => _MedidationTabBarViewState();
+  State<_MeditationTabBarView> createState() => _MeditationTabBarViewState();
 }
 
-final class _MedidationTabBarViewState extends State<_MedidationTabBarView> {
+final class _MeditationTabBarViewState extends State<_MeditationTabBarView> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: [
-        MedidationsCustomRoute(
-          soundLists: SoundLists.medidation,
+        MeditationsCustomRoute(
+          soundLists: SoundLists.meditation,
         ),
-        MedidationsCustomRoute(
+        MeditationsCustomRoute(
           soundLists: SoundLists.yoga,
         ),
-        MedidationsCustomRoute(
+        MeditationsCustomRoute(
           soundLists: SoundLists.music,
         ),
       ],
@@ -32,10 +32,10 @@ final class _MedidationTabBarViewState extends State<_MedidationTabBarView> {
 
         return Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: const _MedidationAppBar(),
+          appBar: const _MeditationAppBar(),
           body: Column(
             children: [
-              _MedidationTabbar(
+              _MeditationTabBar(
                 tabsRouter: tabsRouter,
               ),
               Expanded(
@@ -50,9 +50,9 @@ final class _MedidationTabBarViewState extends State<_MedidationTabBarView> {
   }
 }
 
-final class _MedidationAppBar extends StatelessWidget
+final class _MeditationAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  const _MedidationAppBar();
+  const _MeditationAppBar();
 
   @override
   Widget build(BuildContext context) {

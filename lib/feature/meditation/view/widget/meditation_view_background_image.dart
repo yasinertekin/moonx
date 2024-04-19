@@ -1,7 +1,7 @@
-part of '../medidation_view.dart';
+part of '../meditation_view.dart';
 
-final class _MedidationViewBackgroundImage extends StatelessWidget {
-  const _MedidationViewBackgroundImage();
+final class _MeditationDetailBackgroundImage extends StatelessWidget {
+  const _MeditationDetailBackgroundImage();
 
   @override
   Widget build(BuildContext context) {
