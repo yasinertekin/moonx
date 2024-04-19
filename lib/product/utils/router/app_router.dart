@@ -19,7 +19,7 @@ final class AppRouter extends $AppRouter {
               transitionsBuilder: TransitionsBuilders.fadeIn,
               children: [
                 CustomRoute(
-                  page: MedidationsCustomRoute.page,
+                  page: MeditationsCustomRoute.page,
                 ),
               ],
             ),
@@ -30,7 +30,7 @@ final class AppRouter extends $AppRouter {
         ),
         CustomRoute(
           transitionsBuilder: TransitionsBuilders.slideBottom,
-          page: MedidationDetailRoute.page,
+          page: MeditationDetailRoute.page,
         ),
         CustomRoute(
           page: SplashRoute.page,

@@ -12,11 +12,11 @@ import 'package:auto_route/auto_route.dart' as _i9;
 import 'package:flutter/material.dart' as _i11;
 import 'package:gen/gen.dart' as _i10;
 import 'package:moonx/feature/home/view/home_view.dart' as _i1;
-import 'package:moonx/feature/medidation_detail/medidation_detail_view.dart'
+import 'package:moonx/feature/meditation/view/meditation_view.dart' as _i3;
+import 'package:moonx/feature/meditation/view/widget/meditations_custom_view.dart'
+    as _i4;
+import 'package:moonx/feature/meditation_detail/meditation_detail_view.dart'
     as _i2;
-import 'package:moonx/feature/meditation/view/medidation_view.dart' as _i4;
-import 'package:moonx/feature/meditation/view/widget/medidations_custom_view.dart'
-    as _i3;
 import 'package:moonx/feature/nav_bar/nav_bar_view.dart' as _i5;
 import 'package:moonx/feature/onboarding/view/onboarding_view.dart' as _i6;
 import 'package:moonx/feature/profile/view/profile_view.dart' as _i7;
@@ -33,22 +33,12 @@ abstract class $AppRouter extends _i9.RootStackRouter {
         child: const _i1.HomeView(),
       );
     },
-    MedidationDetailRoute.name: (routeData) {
-      final args = routeData.argsAs<MedidationDetailRouteArgs>();
+    MeditationDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<MeditationDetailRouteArgs>();
       return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i2.MedidationDetailView(
+        child: _i2.MeditationDetailView(
           sound: args.sound,
-          key: args.key,
-        ),
-      );
-    },
-    MedidationsCustomRoute.name: (routeData) {
-      final args = routeData.argsAs<MedidationsCustomRouteArgs>();
-      return _i9.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: _i3.MedidationsCustomView(
-          soundLists: args.soundLists,
           key: args.key,
         ),
       );
@@ -56,7 +46,17 @@ abstract class $AppRouter extends _i9.RootStackRouter {
     MeditationRoute.name: (routeData) {
       return _i9.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.MeditationView(),
+        child: const _i3.MeditationView(),
+      );
+    },
+    MeditationsCustomRoute.name: (routeData) {
+      final args = routeData.argsAs<MeditationsCustomRouteArgs>();
+      return _i9.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: _i4.MeditationsCustomView(
+          soundLists: args.soundLists,
+          key: args.key,
+        ),
       );
     },
     NavBarRoute.name: (routeData) {
@@ -101,30 +101,30 @@ class HomeRoute extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.MedidationDetailView]
-class MedidationDetailRoute
-    extends _i9.PageRouteInfo<MedidationDetailRouteArgs> {
-  MedidationDetailRoute({
+/// [_i2.MeditationDetailView]
+class MeditationDetailRoute
+    extends _i9.PageRouteInfo<MeditationDetailRouteArgs> {
+  MeditationDetailRoute({
     required _i10.Sound sound,
     _i11.Key? key,
     List<_i9.PageRouteInfo>? children,
   }) : super(
-          MedidationDetailRoute.name,
-          args: MedidationDetailRouteArgs(
+          MeditationDetailRoute.name,
+          args: MeditationDetailRouteArgs(
             sound: sound,
             key: key,
           ),
           initialChildren: children,
         );
 
-  static const String name = 'MedidationDetailRoute';
+  static const String name = 'MeditationDetailRoute';
 
-  static const _i9.PageInfo<MedidationDetailRouteArgs> page =
-      _i9.PageInfo<MedidationDetailRouteArgs>(name);
+  static const _i9.PageInfo<MeditationDetailRouteArgs> page =
+      _i9.PageInfo<MeditationDetailRouteArgs>(name);
 }
 
-class MedidationDetailRouteArgs {
-  const MedidationDetailRouteArgs({
+class MeditationDetailRouteArgs {
+  const MeditationDetailRouteArgs({
     required this.sound,
     this.key,
   });
@@ -135,51 +135,12 @@ class MedidationDetailRouteArgs {
 
   @override
   String toString() {
-    return 'MedidationDetailRouteArgs{sound: $sound, key: $key}';
+    return 'MeditationDetailRouteArgs{sound: $sound, key: $key}';
   }
 }
 
 /// generated route for
-/// [_i3.MedidationsCustomView]
-class MedidationsCustomRoute
-    extends _i9.PageRouteInfo<MedidationsCustomRouteArgs> {
-  MedidationsCustomRoute({
-    required _i10.SoundCategory soundLists,
-    _i11.Key? key,
-    List<_i9.PageRouteInfo>? children,
-  }) : super(
-          MedidationsCustomRoute.name,
-          args: MedidationsCustomRouteArgs(
-            soundLists: soundLists,
-            key: key,
-          ),
-          initialChildren: children,
-        );
-
-  static const String name = 'MedidationsCustomRoute';
-
-  static const _i9.PageInfo<MedidationsCustomRouteArgs> page =
-      _i9.PageInfo<MedidationsCustomRouteArgs>(name);
-}
-
-class MedidationsCustomRouteArgs {
-  const MedidationsCustomRouteArgs({
-    required this.soundLists,
-    this.key,
-  });
-
-  final _i10.SoundCategory soundLists;
-
-  final _i11.Key? key;
-
-  @override
-  String toString() {
-    return 'MedidationsCustomRouteArgs{soundLists: $soundLists, key: $key}';
-  }
-}
-
-/// generated route for
-/// [_i4.MeditationView]
+/// [_i3.MeditationView]
 class MeditationRoute extends _i9.PageRouteInfo<void> {
   const MeditationRoute({List<_i9.PageRouteInfo>? children})
       : super(
@@ -190,6 +151,45 @@ class MeditationRoute extends _i9.PageRouteInfo<void> {
   static const String name = 'MeditationRoute';
 
   static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i4.MeditationsCustomView]
+class MeditationsCustomRoute
+    extends _i9.PageRouteInfo<MeditationsCustomRouteArgs> {
+  MeditationsCustomRoute({
+    required _i10.SoundCategory soundLists,
+    _i11.Key? key,
+    List<_i9.PageRouteInfo>? children,
+  }) : super(
+          MeditationsCustomRoute.name,
+          args: MeditationsCustomRouteArgs(
+            soundLists: soundLists,
+            key: key,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'MeditationsCustomRoute';
+
+  static const _i9.PageInfo<MeditationsCustomRouteArgs> page =
+      _i9.PageInfo<MeditationsCustomRouteArgs>(name);
+}
+
+class MeditationsCustomRouteArgs {
+  const MeditationsCustomRouteArgs({
+    required this.soundLists,
+    this.key,
+  });
+
+  final _i10.SoundCategory soundLists;
+
+  final _i11.Key? key;
+
+  @override
+  String toString() {
+    return 'MeditationsCustomRouteArgs{soundLists: $soundLists, key: $key}';
+  }
 }
 
 /// generated route for
