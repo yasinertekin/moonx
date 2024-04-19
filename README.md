@@ -24,34 +24,34 @@ Text Alchemy App is a mobile application developed with Flutter. This applicatio
 
 ## Onboarding
 <p>
-    <img src="screenshots/onboarding1.png" width="25%"/>
-    <img src="screenshots/onboarding2.png" width="26%"/>
+    <img src="screenshots/onboarding1.png" width="25%" />
+    <img src="screenshots/onboarding2.png" width="25%"/>
     <img src="screenshots/onboarding3.png" width="25%"/>
 </p>
 
 ## Home
 <p>
-    <img src="screenshots/home.png" width="19%"/>
-    <img src="screenshots/home2.png" width="19%"/>
-    <img src="screenshots/home3.png" width="19%"/>
+    <img src="screenshots/home.png" width="25%"/>
+    <img src="screenshots/home2.png" width="25%"/>
+    <img src="screenshots/home3.png" width="25%"/>
 </p>
 
 ## Meditation
 <p>
-    <img src="screenshots/meditation.png" width="19%"/>
-    <img src="screenshots/meditation2.png" width="19%"/>
-    <img src="screenshots/meditation3.png" width="19%"/>
+    <img src="screenshots/meditation.png" width="25%"/>
+    <img src="screenshots/meditation2.png" width="25%"/>
+    <img src="screenshots/meditation3.png" width="25%"/>
 </p>
 
 ## Profile
 <p>
-    <img src="screenshots/profile.png"/>
+    <img src="screenshots/profile.png" width="25%"/>
 
 </p>
 
 ## Song
 <p>
-    <img src="screenshots/song.png"/>
+    <img src="screenshots/song.png" width="25%"/>
 
 </p>
 
