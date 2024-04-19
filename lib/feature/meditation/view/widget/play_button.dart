@@ -13,7 +13,7 @@ final class _PlayButton extends StatefulWidget {
   State<_PlayButton> createState() => _PlayButtonState();
 }
 
-class _PlayButtonState extends State<_PlayButton> {
+final class _PlayButtonState extends State<_PlayButton> {
   @override
   void dispose() {
     super.dispose();
@@ -31,24 +31,15 @@ class _PlayButtonState extends State<_PlayButton> {
             right: 12,
           ),
           child: GestureDetector(
-            child: state.status == SoundStatus.playing &&
-                    state.sound == widget.sound
-                ? const Icon(
-                    Icons.pause,
-                    color: ColorName.colorEmptiness,
-                    size: 20,
-                  )
-                : Assets.icons.icPlayButton.svg(
-                    package: 'gen',
-                  ),
+            child: Assets.icons.icPlayButton.svg(
+              package: 'gen',
+            ),
             onTap: () {
               if (state.status == SoundStatus.playing &&
                   state.sound == widget.sound) {
                 context.read<SoundCubit>().stopSound();
-                bloc.updateTimer();
               } else {
                 context.read<SoundCubit>().playSound(widget.sound);
-                bloc.updateTimer();
               }
             },
           ),
