@@ -55,23 +55,33 @@ final class _LunarTipsLCustomListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: context.dynamicWidth(0.38),
-      child: ListTile(
-        onTap: () => context.read<LunarTipsCubit>().changePage(index),
-        shape: RoundedRectangleBorder(
-          borderRadius: ProjectRadius.small.borderRadius,
-        ),
-        title: Text(
-          lunarTips.title ?? '',
-          style: context.theme.textTheme.titleLarge?.copyWith(
-            color: ColorName.colorEmptiness,
-            fontSize: 14,
+    return BlocBuilder<UsersBloc, UsersState>(
+      builder: (context, state) {
+        return SizedBox(
+          width: context.dynamicWidth(0.38),
+          child: ListTile(
+            onTap: state.users.isPremium
+                ? () {
+                    context.read<LunarTipsCubit>().changePage(index);
+                  }
+                : () {
+                    Locator.appRouter.push(const InAppRoute());
+                  },
+            shape: RoundedRectangleBorder(
+              borderRadius: ProjectRadius.small.borderRadius,
+            ),
+            title: Text(
+              lunarTips.title ?? '',
+              style: context.theme.textTheme.titleLarge?.copyWith(
+                color: ColorName.colorEmptiness,
+                fontSize: 14,
+              ),
+            ),
+            tileColor: lunarTips.backgroundColor,
+            leading: lunarTips.imagePath,
           ),
-        ),
-        tileColor: lunarTips.backgroundColor,
-        leading: lunarTips.imagePath,
-      ),
+        );
+      },
     );
   }
 }

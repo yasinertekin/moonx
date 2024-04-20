@@ -114,16 +114,14 @@ final class _LunarHoroscopeDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: ProjectPadding.medium.paddingAll,
-        child: Text(
-          maxLines: 30,
-          lunarTips.description ?? '',
-          style: const TextStyle(
-            color: ColorName.colorEmptiness,
-            fontSize: 14,
-          ),
+    return Padding(
+      padding: ProjectPadding.medium.paddingAll,
+      child: Text(
+        maxLines: 30,
+        lunarTips.description ?? '',
+        style: const TextStyle(
+          color: ColorName.colorEmptiness,
+          fontSize: 14,
         ),
       ),
     );

@@ -33,25 +33,30 @@ final class _HourlyForecastList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 50,
-      width: context.dynamicWidth(1),
-      child: ListView.separated(
-        separatorBuilder: (BuildContext context, int index) {
-          return EmptySizedBox(
-            width: context.dynamicWidth(0.047),
-          );
-        },
-        physics: const NeverScrollableScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: HourlyWeatherForecast.hourlyWeatherForecastList.length,
-        itemBuilder: (BuildContext context, int index) {
-          final hourlyWeatherForecast =
-              HourlyWeatherForecast.hourlyWeatherForecastList[index];
-          return _HourlyForecastItem(
-            hourlyWeatherForecast: hourlyWeatherForecast,
-          );
-        },
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 5,
+      ),
+      child: SizedBox(
+        height: 50,
+        width: context.dynamicWidth(1),
+        child: ListView.separated(
+          separatorBuilder: (BuildContext context, int index) {
+            return EmptySizedBox(
+              width: context.dynamicWidth(0.052),
+            );
+          },
+          physics: const NeverScrollableScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          itemCount: HourlyWeatherForecast.hourlyWeatherForecastList.length,
+          itemBuilder: (BuildContext context, int index) {
+            final hourlyWeatherForecast =
+                HourlyWeatherForecast.hourlyWeatherForecastList[index];
+            return _HourlyForecastItem(
+              hourlyWeatherForecast: hourlyWeatherForecast,
+            );
+          },
+        ),
       ),
     );
   }
