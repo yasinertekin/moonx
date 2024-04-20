@@ -1,4 +1,4 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gen/gen.dart';
@@ -7,12 +7,15 @@ import 'package:moonx/feature/home/cubit/daily_horoscope/daily_horoscope_cubit.d
 import 'package:moonx/feature/home/cubit/home_header/home_header_cubit.dart';
 import 'package:moonx/feature/home/cubit/location/location_cubit.dart';
 import 'package:moonx/feature/home/cubit/lunar_tips/lunar_tips_cubit.dart';
+import 'package:moonx/feature/home/view/mixin/home_view_mixin.dart';
+import 'package:moonx/locator.dart';
 import 'package:moonx/product/core/constants/string_constants.dart';
 import 'package:moonx/product/core/enum/project_padding.dart';
 import 'package:moonx/product/core/enum/project_radius.dart';
 import 'package:moonx/product/core/extension/build_context_extension.dart';
 import 'package:moonx/product/utils/cache/users_bloc.dart';
 import 'package:moonx/product/utils/cache/users_state.dart';
+import 'package:moonx/product/utils/router/app_router.gr.dart';
 import 'package:moonx/product/widget/button/project_button.dart';
 import 'package:moonx/product/widget/container/empty_sized_box.dart';
 import 'package:moonx/product/widget/loading/custom_progress_indicator.dart';
@@ -40,10 +43,15 @@ part 'widget/lunar_tips/lunar_tips_page_view.dart';
 @RoutePage()
 
 /// Home view
-final class HomeView extends StatelessWidget {
+final class HomeView extends StatefulWidget {
   /// Constructor
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+final class _HomeViewState extends State<HomeView> with HomeViewMixin {
   @override
   Widget build(BuildContext context) {
     return const Stack(
