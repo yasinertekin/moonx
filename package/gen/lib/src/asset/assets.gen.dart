@@ -117,6 +117,14 @@ class $AssetsImagesGen {
   AssetGenImage get btnBackPlaylist =>
       const AssetGenImage('assets/images/btn_back_playlist.png');
 
+  /// File path: assets/images/btn_checkbox_selected.png
+  AssetGenImage get btnCheckboxSelected =>
+      const AssetGenImage('assets/images/btn_checkbox_selected.png');
+
+  /// File path: assets/images/btn_checkbox_unselected.png
+  AssetGenImage get btnCheckboxUnselected =>
+      const AssetGenImage('assets/images/btn_checkbox_unselected.png');
+
   /// File path: assets/images/btn_next_playlist.png
   AssetGenImage get btnNextPlaylist =>
       const AssetGenImage('assets/images/btn_next_playlist.png');
@@ -199,6 +207,26 @@ class $AssetsImagesGen {
   /// File path: assets/images/img_home_banner.png
   AssetGenImage get imgHomeBanner =>
       const AssetGenImage('assets/images/img_home_banner.png');
+
+  /// File path: assets/images/img_inapp.png
+  AssetGenImage get imgInapp =>
+      const AssetGenImage('assets/images/img_inapp.png');
+
+  /// File path: assets/images/img_inapp1.png
+  AssetGenImage get imgInapp1 =>
+      const AssetGenImage('assets/images/img_inapp1.png');
+
+  /// File path: assets/images/img_inapp2.png
+  AssetGenImage get imgInapp2 =>
+      const AssetGenImage('assets/images/img_inapp2.png');
+
+  /// File path: assets/images/img_inapp3.png
+  AssetGenImage get imgInapp3 =>
+      const AssetGenImage('assets/images/img_inapp3.png');
+
+  /// File path: assets/images/img_inapp_mostpopular.png
+  AssetGenImage get imgInappMostpopular =>
+      const AssetGenImage('assets/images/img_inapp_mostpopular.png');
 
   /// File path: assets/images/img_medidation_background.png
   AssetGenImage get imgMedidationBackground =>
@@ -291,6 +319,8 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         btnBackPlaylist,
+        btnCheckboxSelected,
+        btnCheckboxUnselected,
         btnNextPlaylist,
         btnPlayPlaylist,
         btnRefreshPlaylist,
@@ -312,6 +342,11 @@ class $AssetsImagesGen {
         imgHelp,
         imgHomeBackground,
         imgHomeBanner,
+        imgInapp,
+        imgInapp1,
+        imgInapp2,
+        imgInapp3,
+        imgInappMostpopular,
         imgMedidationBackground,
         imgMeditation,
         imgMeditation2,

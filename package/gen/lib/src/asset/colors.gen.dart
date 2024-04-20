@@ -16,6 +16,9 @@ class ColorName {
   /// Color: #2e2f42
   static const Color colorAtlanticCharter = Color(0xFF2E2F42);
 
+  /// Color: #FDFEFC
+  static const Color colorBrilliance = Color(0xFFFDFEFC);
+
   /// Color: #E2E3E3
   static const Color colorColdWind = Color(0xFFE2E3E3);
 
