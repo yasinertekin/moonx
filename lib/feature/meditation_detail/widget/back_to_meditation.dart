@@ -15,8 +15,7 @@ final class _BackToMeditation extends StatelessWidget {
           builder: (context, leadingType, action) {
             return GestureDetector(
               onTap: () {
-                // ignore: deprecated_member_use
-                Locator.appRouter.pop();
+                Locator.appRouter.maybePop();
               },
               child: CircleAvatar(
                 backgroundColor: Colors.transparent,
