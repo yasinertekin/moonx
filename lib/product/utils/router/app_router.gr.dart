@@ -8,79 +8,86 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i9;
-import 'package:flutter/material.dart' as _i11;
-import 'package:gen/gen.dart' as _i10;
+import 'package:auto_route/auto_route.dart' as _i10;
+import 'package:flutter/material.dart' as _i12;
+import 'package:gen/gen.dart' as _i11;
 import 'package:moonx/feature/home/view/home_view.dart' as _i1;
-import 'package:moonx/feature/meditation/view/meditation_view.dart' as _i3;
+import 'package:moonx/feature/in_app/view/inn_app_view.dart' as _i2;
+import 'package:moonx/feature/meditation/view/meditation_view.dart' as _i4;
 import 'package:moonx/feature/meditation/view/widget/meditations_custom_view.dart'
-    as _i4;
+    as _i5;
 import 'package:moonx/feature/meditation_detail/meditation_detail_view.dart'
-    as _i2;
-import 'package:moonx/feature/nav_bar/nav_bar_view.dart' as _i5;
-import 'package:moonx/feature/onboarding/view/onboarding_view.dart' as _i6;
-import 'package:moonx/feature/profile/view/profile_view.dart' as _i7;
-import 'package:moonx/feature/splash/view/splash_view.dart' as _i8;
+    as _i3;
+import 'package:moonx/feature/nav_bar/nav_bar_view.dart' as _i6;
+import 'package:moonx/feature/onboarding/view/onboarding_view.dart' as _i7;
+import 'package:moonx/feature/profile/view/profile_view.dart' as _i8;
+import 'package:moonx/feature/splash/view/splash_view.dart' as _i9;
 
-abstract class $AppRouter extends _i9.RootStackRouter {
+abstract class $AppRouter extends _i10.RootStackRouter {
   $AppRouter({super.navigatorKey});
 
   @override
-  final Map<String, _i9.PageFactory> pagesMap = {
+  final Map<String, _i10.PageFactory> pagesMap = {
     HomeRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const _i1.HomeView(),
       );
     },
+    InAppRoute.name: (routeData) {
+      return _i10.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.InAppView(),
+      );
+    },
     MeditationDetailRoute.name: (routeData) {
       final args = routeData.argsAs<MeditationDetailRouteArgs>();
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i2.MeditationDetailView(
+        child: _i3.MeditationDetailView(
           sound: args.sound,
           key: args.key,
         ),
       );
     },
     MeditationRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.MeditationView(),
+        child: const _i4.MeditationView(),
       );
     },
     MeditationsCustomRoute.name: (routeData) {
       final args = routeData.argsAs<MeditationsCustomRouteArgs>();
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.MeditationsCustomView(
+        child: _i5.MeditationsCustomView(
           soundLists: args.soundLists,
           key: args.key,
         ),
       );
     },
     NavBarRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.NavBarView(),
+        child: const _i6.NavBarView(),
       );
     },
     OnboardingRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.OnboardingView(),
+        child: const _i7.OnboardingView(),
       );
     },
     ProfileRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.ProfileView(),
+        child: const _i8.ProfileView(),
       );
     },
     SplashRoute.name: (routeData) {
-      return _i9.AutoRoutePage<dynamic>(
+      return _i10.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.SplashView(),
+        child: const _i9.SplashView(),
       );
     },
   };
@@ -88,8 +95,8 @@ abstract class $AppRouter extends _i9.RootStackRouter {
 
 /// generated route for
 /// [_i1.HomeView]
-class HomeRoute extends _i9.PageRouteInfo<void> {
-  const HomeRoute({List<_i9.PageRouteInfo>? children})
+class HomeRoute extends _i10.PageRouteInfo<void> {
+  const HomeRoute({List<_i10.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -97,17 +104,31 @@ class HomeRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i2.MeditationDetailView]
+/// [_i2.InAppView]
+class InAppRoute extends _i10.PageRouteInfo<void> {
+  const InAppRoute({List<_i10.PageRouteInfo>? children})
+      : super(
+          InAppRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'InAppRoute';
+
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i3.MeditationDetailView]
 class MeditationDetailRoute
-    extends _i9.PageRouteInfo<MeditationDetailRouteArgs> {
+    extends _i10.PageRouteInfo<MeditationDetailRouteArgs> {
   MeditationDetailRoute({
-    required _i10.Sound sound,
-    _i11.Key? key,
-    List<_i9.PageRouteInfo>? children,
+    required _i11.Sound sound,
+    _i12.Key? key,
+    List<_i10.PageRouteInfo>? children,
   }) : super(
           MeditationDetailRoute.name,
           args: MeditationDetailRouteArgs(
@@ -119,8 +140,8 @@ class MeditationDetailRoute
 
   static const String name = 'MeditationDetailRoute';
 
-  static const _i9.PageInfo<MeditationDetailRouteArgs> page =
-      _i9.PageInfo<MeditationDetailRouteArgs>(name);
+  static const _i10.PageInfo<MeditationDetailRouteArgs> page =
+      _i10.PageInfo<MeditationDetailRouteArgs>(name);
 }
 
 class MeditationDetailRouteArgs {
@@ -129,9 +150,9 @@ class MeditationDetailRouteArgs {
     this.key,
   });
 
-  final _i10.Sound sound;
+  final _i11.Sound sound;
 
-  final _i11.Key? key;
+  final _i12.Key? key;
 
   @override
   String toString() {
@@ -140,9 +161,9 @@ class MeditationDetailRouteArgs {
 }
 
 /// generated route for
-/// [_i3.MeditationView]
-class MeditationRoute extends _i9.PageRouteInfo<void> {
-  const MeditationRoute({List<_i9.PageRouteInfo>? children})
+/// [_i4.MeditationView]
+class MeditationRoute extends _i10.PageRouteInfo<void> {
+  const MeditationRoute({List<_i10.PageRouteInfo>? children})
       : super(
           MeditationRoute.name,
           initialChildren: children,
@@ -150,17 +171,17 @@ class MeditationRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'MeditationRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i4.MeditationsCustomView]
+/// [_i5.MeditationsCustomView]
 class MeditationsCustomRoute
-    extends _i9.PageRouteInfo<MeditationsCustomRouteArgs> {
+    extends _i10.PageRouteInfo<MeditationsCustomRouteArgs> {
   MeditationsCustomRoute({
-    required _i10.SoundCategory soundLists,
-    _i11.Key? key,
-    List<_i9.PageRouteInfo>? children,
+    required _i11.SoundCategory soundLists,
+    _i12.Key? key,
+    List<_i10.PageRouteInfo>? children,
   }) : super(
           MeditationsCustomRoute.name,
           args: MeditationsCustomRouteArgs(
@@ -172,8 +193,8 @@ class MeditationsCustomRoute
 
   static const String name = 'MeditationsCustomRoute';
 
-  static const _i9.PageInfo<MeditationsCustomRouteArgs> page =
-      _i9.PageInfo<MeditationsCustomRouteArgs>(name);
+  static const _i10.PageInfo<MeditationsCustomRouteArgs> page =
+      _i10.PageInfo<MeditationsCustomRouteArgs>(name);
 }
 
 class MeditationsCustomRouteArgs {
@@ -182,9 +203,9 @@ class MeditationsCustomRouteArgs {
     this.key,
   });
 
-  final _i10.SoundCategory soundLists;
+  final _i11.SoundCategory soundLists;
 
-  final _i11.Key? key;
+  final _i12.Key? key;
 
   @override
   String toString() {
@@ -193,9 +214,9 @@ class MeditationsCustomRouteArgs {
 }
 
 /// generated route for
-/// [_i5.NavBarView]
-class NavBarRoute extends _i9.PageRouteInfo<void> {
-  const NavBarRoute({List<_i9.PageRouteInfo>? children})
+/// [_i6.NavBarView]
+class NavBarRoute extends _i10.PageRouteInfo<void> {
+  const NavBarRoute({List<_i10.PageRouteInfo>? children})
       : super(
           NavBarRoute.name,
           initialChildren: children,
@@ -203,13 +224,13 @@ class NavBarRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'NavBarRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i6.OnboardingView]
-class OnboardingRoute extends _i9.PageRouteInfo<void> {
-  const OnboardingRoute({List<_i9.PageRouteInfo>? children})
+/// [_i7.OnboardingView]
+class OnboardingRoute extends _i10.PageRouteInfo<void> {
+  const OnboardingRoute({List<_i10.PageRouteInfo>? children})
       : super(
           OnboardingRoute.name,
           initialChildren: children,
@@ -217,13 +238,13 @@ class OnboardingRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'OnboardingRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i7.ProfileView]
-class ProfileRoute extends _i9.PageRouteInfo<void> {
-  const ProfileRoute({List<_i9.PageRouteInfo>? children})
+/// [_i8.ProfileView]
+class ProfileRoute extends _i10.PageRouteInfo<void> {
+  const ProfileRoute({List<_i10.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -231,13 +252,13 @@ class ProfileRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }
 
 /// generated route for
-/// [_i8.SplashView]
-class SplashRoute extends _i9.PageRouteInfo<void> {
-  const SplashRoute({List<_i9.PageRouteInfo>? children})
+/// [_i9.SplashView]
+class SplashRoute extends _i10.PageRouteInfo<void> {
+  const SplashRoute({List<_i10.PageRouteInfo>? children})
       : super(
           SplashRoute.name,
           initialChildren: children,
@@ -245,5 +266,5 @@ class SplashRoute extends _i9.PageRouteInfo<void> {
 
   static const String name = 'SplashRoute';
 
-  static const _i9.PageInfo<void> page = _i9.PageInfo<void>(name);
+  static const _i10.PageInfo<void> page = _i10.PageInfo<void>(name);
 }

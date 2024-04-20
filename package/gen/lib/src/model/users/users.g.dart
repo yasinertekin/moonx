@@ -13,6 +13,7 @@ Users _$UsersFromJson(Map<String, dynamic> json) => Users(
       birthTime: json['birthTime'] as String,
       placeOfBirth: json['placeOfBirth'] as String,
       horoscope: $enumDecode(_$HoroscopeEnumMap, json['horoscope']),
+      isPremium: json['isPremium'] as bool? ?? false,
       id: json['id'] as String?,
     );
 
@@ -24,6 +25,7 @@ Map<String, dynamic> _$UsersToJson(Users instance) => <String, dynamic>{
       'birthTime': instance.birthTime,
       'placeOfBirth': instance.placeOfBirth,
       'horoscope': _$HoroscopeEnumMap[instance.horoscope]!,
+      'isPremium': instance.isPremium,
     };
 
 const _$HoroscopeEnumMap = {

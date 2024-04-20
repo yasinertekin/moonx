@@ -24,7 +24,9 @@ base mixin _ProjectButtonMixin on State<_OnboardingButton> {
         context.read<OnboardingCubit>().nextPage();
       case OnBoardingEnum.birthPlace:
         if (placeOfBirth.isEmpty) return;
-        Locator.appRouter.push(const HomeRoute());
+        Locator.appRouter.push(
+          const NavBarRoute(),
+        );
     }
   }
 }

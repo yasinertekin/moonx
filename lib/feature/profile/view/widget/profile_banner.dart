@@ -5,20 +5,29 @@ final class _ProfileBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const _ProfileBannerImage(),
-        Positioned(
-          left: context.dynamicWidth(0.03),
-          top: context.dynamicHeight(0.03),
-          child: const _BannerHeader(),
-        ),
-        Positioned(
-          left: context.dynamicWidth(0.03),
-          bottom: context.dynamicHeight(0.03),
-          child: const _BannerDescription(),
-        ),
-      ],
+    return GestureDetector(
+      onTap: () {
+        context.read<UsersBloc>().state.users.isPremium == false
+            ? Locator.appRouter.push(
+                const InAppRoute(),
+              )
+            : null;
+      },
+      child: Stack(
+        children: [
+          const _ProfileBannerImage(),
+          Positioned(
+            left: context.dynamicWidth(0.03),
+            top: context.dynamicHeight(0.03),
+            child: const _BannerHeader(),
+          ),
+          Positioned(
+            left: context.dynamicWidth(0.03),
+            bottom: context.dynamicHeight(0.03),
+            child: const _BannerDescription(),
+          ),
+        ],
+      ),
     );
   }
 }

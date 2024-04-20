@@ -14,7 +14,7 @@ base mixin _SplashViewMixin on State<SplashView> {
     Future.delayed(const Duration(seconds: 2), () {
       _isLogin = context.read<UsersBloc>().state.users.birthDate.isNotEmpty;
       if (_isLogin) {
-        Locator.appRouter.replace(const NavBarRoute());
+        Locator.appRouter.replace(const HomeRoute());
       } else {
         Locator.appRouter.replace(const OnboardingRoute());
       }

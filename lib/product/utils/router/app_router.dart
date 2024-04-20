@@ -37,6 +37,10 @@ final class AppRouter extends $AppRouter {
           initial: true,
         ),
         CustomRoute(
+          page: InAppRoute.page,
+          transitionsBuilder: TransitionsBuilders.slideBottom,
+        ),
+        CustomRoute(
           page: OnboardingRoute.page,
         ),
       ];

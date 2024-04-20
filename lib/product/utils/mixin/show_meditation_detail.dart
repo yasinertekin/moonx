@@ -11,6 +11,7 @@ base mixin ShowMeditationDetailMixin {
   void showMeditationDetail(BuildContext context, Sound sound) {
     showModalBottomSheet<void>(
       isScrollControlled: true,
+      scrollControlDisabledMaxHeightRatio: 1,
       context: context,
       builder: (BuildContext context) {
         return MeditationDetailView(

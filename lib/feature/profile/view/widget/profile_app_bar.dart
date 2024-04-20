@@ -8,8 +8,9 @@ final class _ProfileAppBar extends StatelessWidget
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: ColorName.colorRavensCoat,
-      leading: const _AppBarLeading(),
       title: const _AppBarTitle(),
+      centerTitle: true,
+      automaticallyImplyLeading: false,
     );
   }
 

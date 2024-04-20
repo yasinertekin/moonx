@@ -22,6 +22,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.omerbalikciCoffeBlues.asset,
             voiceLength: 220,
@@ -34,6 +35,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.adimiKalbineYaz.asset,
             voiceLength: 312,
@@ -51,6 +53,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground1.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.birZamanlrFirtinalarEstirirdim.asset,
             voiceLength: 263,
@@ -63,6 +66,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground1.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.serdarOrtacSeytan.asset,
             voiceLength: 309,
@@ -87,6 +91,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.copoeirParnue.asset,
             voiceLength: 177,
@@ -99,6 +104,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground2.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.ladiesOfTheWood.asset,
             voiceLength: 150,
@@ -123,6 +129,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.tarkanAradaBir.asset,
             voiceLength: 259,
@@ -135,6 +142,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.holdingOutForAHero.asset,
             voiceLength: 284,
@@ -147,6 +155,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.mustafaSandalAyaBenzer.asset,
             voiceLength: 228,
@@ -159,6 +168,7 @@ final class SoundLists {
             ),
             bigImage: Assets.images.imgBackground3.image(
               package: 'gen',
+              fit: BoxFit.cover,
             ),
             audioPath: SoundAssets.englishManInNewYork.asset,
             voiceLength: 267,
