@@ -11,23 +11,26 @@ final class _DailyHoroscopeState extends State<_DailyHoroscope>
     with _DailyHoroscopeMixin {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<DailyHoroscopeCubit, DailyHoroscopeState>(
-      builder: (context, state) {
-        switch (state.status) {
-          case GeminiStatus.loading:
-            return const CustomProgressIndicator();
-          case GeminiStatus.success:
-            return _DailyHoroscopeResult(
-              promptResponse: state.promptResponse!,
-            );
-          case GeminiStatus.failure:
-            return Text(
-              state.errorMessage,
-            );
-          case GeminiStatus.initial:
-            return const SizedBox.shrink();
-        }
-      },
+    return SizedBox(
+      height: context.dynamicHeight(0.5),
+      child: BlocBuilder<DailyHoroscopeCubit, DailyHoroscopeState>(
+        builder: (context, state) {
+          switch (state.status) {
+            case GeminiStatus.loading:
+              return const CustomProgressIndicator();
+            case GeminiStatus.success:
+              return _DailyHoroscopeResult(
+                promptResponse: state.promptResponse!,
+              );
+            case GeminiStatus.failure:
+              return Text(
+                state.errorMessage,
+              );
+            case GeminiStatus.initial:
+              return const SizedBox.shrink();
+          }
+        },
+      ),
     );
   }
 }
