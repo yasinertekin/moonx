@@ -35,23 +35,21 @@ final class MeditationDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     final bloc = BlocProvider.of<SoundCubit>(context);
 
-    return Scaffold(
-      body: Stack(
-        children: [
-          _MeditationDetailBackgroundImage(sound: sound),
-          const _BackToMeditation(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              _SoundTitle(sound: sound),
-              _MeditationPlayer(sound: sound, bloc: bloc),
-              EmptySizedBox(
-                height: context.dynamicHeight(0.1),
-              ),
-            ],
-          ),
-        ],
-      ),
+    return Stack(
+      children: [
+        _MeditationDetailBackgroundImage(sound: sound),
+        const _BackToMeditation(),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            _SoundTitle(sound: sound),
+            _MeditationPlayer(sound: sound, bloc: bloc),
+            EmptySizedBox(
+              height: context.dynamicHeight(0.1),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
