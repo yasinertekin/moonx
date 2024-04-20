@@ -5,3 +5,4 @@ analyzer:
     - '**/*.g.dart'
     - '**/*.gr.dart'
     - 'lib/feature/onboarding/view/mixin/onboarding_builder_mixin.dart'
+    - 'pubspec.yaml'
