@@ -4,3 +4,4 @@ analyzer:
   exclude:
     - '**/*.g.dart'
     - 'lib/src/enum/sound_assets.dart'
+    - 'pubspec.yaml'
