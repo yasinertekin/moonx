@@ -61,12 +61,7 @@ final class _MeditationAppBar extends StatelessWidget
       forceMaterialTransparency: true,
       elevation: 0,
       backgroundColor: Colors.transparent,
-      leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
-        onPressed: () {
-          //  context.router.pop();
-        },
-      ),
+      automaticallyImplyLeading: false,
     );
   }
 
