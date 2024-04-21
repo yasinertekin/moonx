@@ -48,6 +48,8 @@ dependencies:
   table_calendar: ^3.1.1
   glass: ^2.0.0+1
   carousel_slider: ^4.2.1
+  webview_flutter: ^4.7.0
+
 
   # Network
   dio: ^5.4.2+1

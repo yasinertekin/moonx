@@ -6,21 +6,23 @@ final class _InAppViewAppBar extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      forceMaterialTransparency: true,
-      centerTitle: true,
-      title: const _AppBarTitle(),
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.close),
-          onPressed: () {
-            Locator.appRouter.maybePop();
-          },
-        ),
-      ],
+    return SafeArea(
+      child: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        forceMaterialTransparency: true,
+        centerTitle: true,
+        title: const _AppBarTitle(),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.close),
+            onPressed: () {
+              Locator.appRouter.maybePop();
+            },
+          ),
+        ],
+      ),
     );
   }
 

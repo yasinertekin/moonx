@@ -43,5 +43,8 @@ final class AppRouter extends $AppRouter {
         CustomRoute(
           page: OnboardingRoute.page,
         ),
+        CustomRoute(
+          page: WebRoute.page,
+        ),
       ];
 }

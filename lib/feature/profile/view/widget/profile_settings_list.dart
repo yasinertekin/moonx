@@ -39,7 +39,9 @@ final class _SettingsListTile extends StatelessWidget {
           borderRadius: ProjectRadius.small.borderRadius,
         ),
         tileColor: ColorName.colorDarkNight,
-        onTap: () {},
+        onTap: () async {
+          await Locator.appRouter.push(const WebRoute());
+        },
         title: _SettingsListTileTitle(settings: settings),
         leading: settings.image,
       ),
