@@ -31,7 +31,7 @@ final class _SoundItemList extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
-              mainAxisExtent: 250,
+              mainAxisExtent: 265,
             ),
             physics: const NeverScrollableScrollPhysics(),
             itemCount: state.length,
