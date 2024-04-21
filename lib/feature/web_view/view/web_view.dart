@@ -19,6 +19,9 @@ final class _WebViewState extends State<WebView> with WebViewMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Web View'),
+      ),
       body: WebViewWidget(
         controller: controller,
       ),
