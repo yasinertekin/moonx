@@ -1,5 +1,6 @@
 part of '../web_view.dart';
 
+/// WebViewMixin
 base mixin WebViewMixin on State<WebView> {
   late final WebViewController _controller;
 
