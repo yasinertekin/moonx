@@ -22,7 +22,7 @@ import 'package:moonx/feature/nav_bar/nav_bar_view.dart' as _i6;
 import 'package:moonx/feature/onboarding/view/onboarding_view.dart' as _i7;
 import 'package:moonx/feature/profile/view/profile_view.dart' as _i8;
 import 'package:moonx/feature/splash/view/splash_view.dart' as _i9;
-import 'package:moonx/feature/web_view/web_view.dart' as _i10;
+import 'package:moonx/feature/web_view/view/web_view.dart' as _i10;
 
 abstract class $AppRouter extends _i11.RootStackRouter {
   $AppRouter({super.navigatorKey});
