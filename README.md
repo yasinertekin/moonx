@@ -56,7 +56,6 @@ Moonx App is a mobile application developed with Flutter. This application provi
 - State Management
 
   - [Bloc](https://pub.dev/packages/flutter_bloc)
-  - [Provider](https://pub.dev/packages/provider)
 
 - Caching
   - [HydratedBloc](https://pub.dev/packages/hydrated_bloc)
